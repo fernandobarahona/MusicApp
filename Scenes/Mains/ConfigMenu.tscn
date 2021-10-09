@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/Bubblegum.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/ConfigMenu.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 1 )
+
+[node name="ConfigScene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="HUD" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HUD"]
+anchor_left = 0.118345
+anchor_top = 5.77858
+anchor_right = 14.9434
+anchor_bottom = 7.12858
+margin_left = 50.9117
+margin_top = 16.9706
+margin_right = 50.9117
+margin_bottom = 16.9706
+custom_fonts/font = SubResource( 1 )
+text = "CONFIG SCENE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Panel" type="Panel" parent="HUD"]
+margin_left = 128.918
+margin_top = 376.655
+margin_right = 587.918
+margin_bottom = 727.655
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelSpeed" type="Label" parent="HUD/Panel"]
+margin_left = 67.9901
+margin_top = 96.217
+margin_right = 148.99
+margin_bottom = 129.217
+custom_fonts/font = SubResource( 2 )
+text = "Speed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnSpeedMinus" type="Button" parent="HUD/Panel"]
+margin_left = 163.227
+margin_top = 90.0
+margin_right = 240.227
+margin_bottom = 131.0
+custom_fonts/font = SubResource( 3 )
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnSpeedAdd" type="Button" parent="HUD/Panel"]
+margin_left = 264.675
+margin_top = 90.0
+margin_right = 341.675
+margin_bottom = 131.0
+custom_fonts/font = SubResource( 3 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="HUD/Panel"]
+margin_left = 74.0166
+margin_top = 208.296
+margin_right = 350.017
+margin_bottom = 261.296
+custom_fonts/font = SubResource( 4 )
+text = "Auto slow down"
+__meta__ = {
+"_edit_use_anchors_": false
+}

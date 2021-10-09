@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fonts/Bubblegum.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 34
+font_data = ExtResource( 1 )
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="HUD" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="HUD"]
+anchor_left = -4.03755
+anchor_top = 5.56481
+anchor_right = -4.03755
+anchor_bottom = 7.08981
+margin_left = 314.0
+margin_top = 75.0
+margin_right = 751.0
+margin_bottom = 499.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btnGame" type="Button" parent="HUD/Panel"]
+margin_left = 104.608
+margin_top = 46.8829
+margin_right = 314.608
+margin_bottom = 94.8829
+custom_fonts/font = SubResource( 1 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnConfig" type="Button" parent="HUD/Panel"]
+margin_left = 105.547
+margin_top = 132.326
+margin_right = 315.547
+margin_bottom = 180.326
+custom_fonts/font = SubResource( 1 )
+text = "COnfig"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnCredit" type="Button" parent="HUD/Panel"]
+margin_left = 104.441
+margin_top = 226.154
+margin_right = 314.441
+margin_bottom = 274.154
+custom_fonts/font = SubResource( 1 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnPractice" type="Button" parent="HUD/Panel"]
+margin_left = 105.071
+margin_top = 325.058
+margin_right = 315.071
+margin_bottom = 373.058
+custom_fonts/font = SubResource( 1 )
+text = "Pratice"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnLogin" type="Button" parent="HUD/Panel"]
+margin_left = 106.13
+margin_top = 410.874
+margin_right = 316.13
+margin_bottom = 458.874
+custom_fonts/font = SubResource( 1 )
+text = "Login"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="HUD/Panel/btnGame" to="." method="_on_btnGame_pressed"]
+[connection signal="pressed" from="HUD/Panel/btnConfig" to="." method="_on_btnConfig_pressed"]
+[connection signal="pressed" from="HUD/Panel/btnCredit" to="." method="_on_btnCredit_pressed"]
+[connection signal="pressed" from="HUD/Panel/btnPractice" to="." method="_on_btnPractice_pressed"]
+[connection signal="pressed" from="HUD/Panel/btnLogin" to="." method="_on_btnLogin_pressed"]

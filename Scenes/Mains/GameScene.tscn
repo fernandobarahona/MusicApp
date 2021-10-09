@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fonts/Bubblegum.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/GameScene.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Huds/PopupLeave.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="HUD" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HUD"]
+anchor_left = 0.20008
+anchor_top = 9.88524
+anchor_right = 15.0251
+anchor_bottom = 11.2352
+margin_left = 65.9254
+margin_top = 8.98987
+margin_right = 65.9254
+margin_bottom = 8.98987
+custom_fonts/font = SubResource( 1 )
+text = "GAME SCENE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnConfig" type="Button" parent="HUD"]
+margin_left = 243.915
+margin_top = 549.316
+margin_right = 505.915
+margin_bottom = 600.316
+custom_fonts/font = SubResource( 2 )
+text = "Config"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupLeave" parent="HUD" instance=ExtResource( 3 )]
+visible = false
+margin_left = 84.0133
+margin_top = 344.478
+margin_right = 84.0133
+margin_bottom = 344.478
+
+[connection signal="pressed" from="HUD/btnConfig" to="." method="_on_btnConfig_pressed"]
