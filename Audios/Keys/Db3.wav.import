@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Db3.wav-50dbd27ddaa434d2fa4d1a87581d965d.sample"
+
+[deps]
+
+source_file="res://Audios/Keys/Db3.wav"
+dest_files=[ "res://.import/Db3.wav-50dbd27ddaa434d2fa4d1a87581d965d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

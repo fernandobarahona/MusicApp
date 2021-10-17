@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/E7.wav-c5d724597032cd1f17828f4f61aa9028.sample"
+
+[deps]
+
+source_file="res://Audios/Keys/E7.wav"
+dest_files=[ "res://.import/E7.wav-c5d724597032cd1f17828f4f61aa9028.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

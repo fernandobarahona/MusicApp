@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "Note",
+"language": "GDScript",
+"path": "res://Scripts/Piano/Note.gd"
+} ]
 _global_script_class_icons={
-
+"Note": ""
 }
 
 [application]
