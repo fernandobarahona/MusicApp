@@ -84,7 +84,6 @@ text = "Login"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="pressed" from="HUD/Panel/btnGame" to="." method="_on_btnGame_pressed"]
 [connection signal="pressed" from="HUD/Panel/btnConfig" to="." method="_on_btnConfig_pressed"]
 [connection signal="pressed" from="HUD/Panel/btnCredit" to="." method="_on_btnCredit_pressed"]

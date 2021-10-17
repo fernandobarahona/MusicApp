@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Bb4.ogg-3624d0449a010f7bfb63b44b7630c404.oggstr"
+
+[deps]
+
+source_file="res://Audios/Keys/Bb4.ogg"
+dest_files=[ "res://.import/Bb4.ogg-3624d0449a010f7bfb63b44b7630c404.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

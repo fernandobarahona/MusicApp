@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://fonts/Bubblegum.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/GameScene.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Huds/PopupLeave.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Huds/PianoView.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -27,10 +28,10 @@ anchor_left = 0.20008
 anchor_top = 9.88524
 anchor_right = 15.0251
 anchor_bottom = 11.2352
-margin_left = 65.9254
-margin_top = 8.98987
-margin_right = 65.9254
-margin_bottom = 8.98987
+margin_left = 62.3618
+margin_top = -244.025
+margin_right = 62.3618
+margin_bottom = -244.024
 custom_fonts/font = SubResource( 1 )
 text = "GAME SCENE"
 align = 1
@@ -39,10 +40,10 @@ __meta__ = {
 }
 
 [node name="btnConfig" type="Button" parent="HUD"]
-margin_left = 243.915
-margin_top = 549.316
-margin_right = 505.915
-margin_bottom = 600.316
+margin_left = 445.258
+margin_top = 11.2132
+margin_right = 707.258
+margin_bottom = 62.2132
 custom_fonts/font = SubResource( 2 )
 text = "Config"
 __meta__ = {
@@ -56,4 +57,5 @@ margin_top = 344.478
 margin_right = 84.0133
 margin_bottom = 344.478
 
+[node name="Piano" parent="." instance=ExtResource( 4 )]
 [connection signal="pressed" from="HUD/btnConfig" to="." method="_on_btnConfig_pressed"]
