@@ -42,4 +42,6 @@ margin_top = 344.478
 margin_right = 84.0133
 margin_bottom = 344.478
 
+[connection signal="piano_key_pressed" from="Piano" to="Sheet" method="_on_Piano_piano_key_pressed"]
+[connection signal="note_displayed" from="Sheet" to="Piano" method="_on_Sheet_note_displayed"]
 [connection signal="pressed" from="HUD/btnConfig" to="." method="_on_btnConfig_pressed"]
