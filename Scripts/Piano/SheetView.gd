@@ -1,18 +1,37 @@
 extends Control
 
+# all notes generated to create the music score
+var generated_notes = []
+
+# number of notes to generate
+var nb_notes_togenerated = 20
+
+var counter = 2
+
+var current_displayed_index = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var p = Note.new()
-	p.note = GameManager.Notes.E
-	p.octave = GameManager.Octave.oct_5
+	var p = Note.new(GameManager.Notes.E, GameManager.Octave.oct_5)
 	_display_note(p)
-
+	var ng = NotesGenerator.new()
+	generated_notes = ng._generetate_notes(nb_notes_togenerated)
+	_display_note(generated_notes[current_displayed_index])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	
+	if generated_notes.size() > current_displayed_index:
+		
+		counter -= delta
+	
+		if counter <= 0:
+			current_displayed_index+=1
+			counter = 2
+			if generated_notes.size() > current_displayed_index:
+				_display_note(generated_notes[current_displayed_index])
 
+#this function display visually on the sheet a note
 func _display_note(note: Note):
 	if note.octave == GameManager.Octave.oct_3:
 		if note.note == GameManager.Notes.A:

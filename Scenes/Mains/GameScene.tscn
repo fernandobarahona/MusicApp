@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes/Huds/PianoView.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Huds/SheetView.tscn" type="PackedScene" id=5]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 1 )
 
@@ -29,7 +29,7 @@ margin_left = 445.258
 margin_top = 11.2132
 margin_right = 707.258
 margin_bottom = 62.2132
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Config"
 __meta__ = {
 "_edit_use_anchors_": false
