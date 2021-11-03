@@ -97,18 +97,18 @@ func _display_note(note: Note):
 
 func _on_Piano_piano_key_pressed(note, btn):
 	
-	if last_key_pressed:
-		last_key_pressed.get_stylebox("normal").bg_color = last_key_pressed.btn_color
-		last_key_pressed.get_stylebox("focus").bg_color = last_key_pressed.btn_color
+#	if last_key_pressed:
+#		last_key_pressed.get_stylebox("normal").bg_color = last_key_pressed.btn_color
+#		last_key_pressed.get_stylebox("focus").bg_color = last_key_pressed.btn_color
 	
 	last_key_pressed = btn
 	
-	if generated_notes[current_displayed_index].note == note.note and generated_notes[current_displayed_index].octave == note.octave:
-		btn.get_stylebox("normal").bg_color = Color.green
-		btn.get_stylebox("focus").bg_color = Color.green
-	else:
-		btn.get_stylebox("normal").bg_color = Color.red
-		btn.get_stylebox("focus").bg_color = Color.red
+#	if generated_notes[current_displayed_index].note == note.note and generated_notes[current_displayed_index].octave == note.octave:
+#		btn.get_stylebox("normal").bg_color = Color.green
+#		btn.get_stylebox("focus").bg_color = Color.green
+#	else:
+#		btn.get_stylebox("normal").bg_color = Color.red
+#		btn.get_stylebox("focus").bg_color = Color.red
 	
 	print("Press note "+str(note.note))
 	print("Press note octave "+str(note.octave))	
