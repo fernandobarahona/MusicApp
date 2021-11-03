@@ -27,3 +27,10 @@ func _notification(what):
 			get_tree().change_scene("res://Scenes/Mains/MainMenu.tscn")
 		elif GameManager.prev_scene == GameManager.scene.GameScene:
 			get_tree().change_scene("res://Scenes/Mains/GameScene.tscn")
+
+
+func _on_btn_pressed():
+	if GameManager.prev_scene == GameManager.scene.MainMenu:
+		get_tree().change_scene("res://Scenes/Mains/MainMenu.tscn")
+	elif GameManager.prev_scene == GameManager.scene.GameScene:
+		get_tree().change_scene("res://Scenes/Mains/GameScene.tscn")

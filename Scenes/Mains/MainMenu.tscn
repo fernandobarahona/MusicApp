@@ -1,7 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://fonts/Bubblegum.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/SceneManager/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Design/main menu/MAIN MENU.jpg" type="Texture" id=3]
+[ext_resource path="res://Sprites/Design/main menu/_0013_bg.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Design/main menu/_0012_Rectangle-1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Design/main menu/_0011_Vector-Smart-Object.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Design/main menu/_0010_GAME.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Design/main menu/_0009_Practice.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Design/main menu/_0004_Vector-Smart-Object.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Design/main menu/_0007_Vector-Smart-Object.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Design/main menu/_0008_About-.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Design/main menu/_0005_Config.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Design/main menu/_0006_settings-gear.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Design/main menu/_0003_Rectangle-1-copy.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Design/main menu/_0002_LOGIN.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Design/main menu/_0001_Layer-79.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Design/main menu/_0000_text.png" type="Texture" id=17]
 
 [sub_resource type="DynamicFont" id=1]
 size = 34
@@ -18,10 +33,10 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="HUD"]
-anchor_left = -4.03755
-anchor_top = 5.56481
-anchor_right = -4.03755
-anchor_bottom = 7.08981
+anchor_left = -7.85
+anchor_top = -1.875
+anchor_right = -0.875
+anchor_bottom = 7.1
 margin_left = 314.0
 margin_top = 75.0
 margin_right = 751.0
@@ -30,62 +45,255 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="btnGame" type="Button" parent="HUD/Panel"]
-margin_left = 104.608
-margin_top = 46.8829
-margin_right = 314.608
-margin_bottom = 94.8829
-custom_fonts/font = SubResource( 1 )
-text = "Play"
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+visible = false
+margin_left = 918.068
+margin_top = 9.51367
+margin_right = 1634.07
+margin_bottom = 1282.51
+texture = ExtResource( 3 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btnConfig" type="Button" parent="HUD/Panel"]
-margin_left = 105.547
-margin_top = 132.326
-margin_right = 315.547
-margin_bottom = 180.326
-custom_fonts/font = SubResource( 1 )
-text = "COnfig"
+[node name="Bg" type="TextureRect" parent="HUD"]
+margin_right = 724.0
+margin_bottom = 1289.0
+texture = ExtResource( 4 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btnCredit" type="Button" parent="HUD/Panel"]
-margin_left = 104.441
-margin_top = 226.154
-margin_right = 314.441
-margin_bottom = 274.154
-custom_fonts/font = SubResource( 1 )
-text = "Credits"
+[node name="logo" type="TextureRect" parent="HUD/Bg"]
+margin_left = 268.0
+margin_top = 90.0
+margin_right = 480.0
+margin_bottom = 320.0
+texture = ExtResource( 16 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Bg"]
+margin_left = 131.214
+margin_top = 356.139
+margin_right = 573.214
+margin_bottom = 416.139
+texture = ExtResource( 17 )
+expand = true
+
+[node name="btnGame" type="TextureRect" parent="HUD/Bg"]
+margin_left = 128.209
+margin_top = 484.742
+margin_right = 342.209
+margin_bottom = 699.742
+texture = ExtResource( 5 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btnPractice" type="Button" parent="HUD/Panel"]
-margin_left = 105.071
-margin_top = 325.058
-margin_right = 315.071
-margin_bottom = 373.058
-custom_fonts/font = SubResource( 1 )
-text = "Pratice"
+[node name="text" type="TextureRect" parent="HUD/Bg/btnGame"]
+margin_left = 47.0
+margin_top = 224.0
+margin_right = 163.0
+margin_bottom = 254.0
+texture = ExtResource( 7 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btnLogin" type="Button" parent="HUD/Panel"]
-margin_left = 106.13
-margin_top = 410.874
-margin_right = 316.13
-margin_bottom = 458.874
-custom_fonts/font = SubResource( 1 )
-text = "Login"
+[node name="texture" type="TextureButton" parent="HUD/Bg/btnGame"]
+margin_left = 40.5992
+margin_top = 29.5992
+margin_right = 172.599
+margin_bottom = 176.599
+texture_normal = ExtResource( 6 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="HUD/Panel/btnGame" to="." method="_on_btnGame_pressed"]
-[connection signal="pressed" from="HUD/Panel/btnConfig" to="." method="_on_btnConfig_pressed"]
-[connection signal="pressed" from="HUD/Panel/btnCredit" to="." method="_on_btnCredit_pressed"]
-[connection signal="pressed" from="HUD/Panel/btnPractice" to="." method="_on_btnPractice_pressed"]
-[connection signal="pressed" from="HUD/Panel/btnLogin" to="." method="_on_btnLogin_pressed"]
+
+[node name="btn" type="Button" parent="HUD/Bg/btnGame"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 3.79126
+margin_top = 2.25806
+margin_right = 208.791
+margin_bottom = 207.258
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnPractice" type="TextureRect" parent="HUD/Bg"]
+margin_left = 369.835
+margin_top = 485.751
+margin_right = 583.835
+margin_bottom = 700.751
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="TextureRect" parent="HUD/Bg/btnPractice"]
+margin_left = 10.973
+margin_top = 222.0
+margin_right = 196.973
+margin_bottom = 252.0
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texture" type="TextureButton" parent="HUD/Bg/btnPractice"]
+margin_left = 33.0
+margin_top = 38.0
+margin_right = 180.0
+margin_bottom = 165.0
+texture_normal = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn" type="Button" parent="HUD/Bg/btnPractice"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 3.0
+margin_right = 211.0
+margin_bottom = 209.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnAbout" type="TextureRect" parent="HUD/Bg"]
+margin_left = 129.432
+margin_top = 776.5
+margin_right = 343.432
+margin_bottom = 991.5
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="TextureRect" parent="HUD/Bg/btnAbout"]
+margin_left = 37.6787
+margin_top = 222.122
+margin_right = 173.679
+margin_bottom = 252.122
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texture" type="TextureButton" parent="HUD/Bg/btnAbout"]
+margin_left = 39.5
+margin_top = 25.0
+margin_right = 176.5
+margin_bottom = 178.0
+texture_normal = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn" type="Button" parent="HUD/Bg/btnAbout"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 3.0
+margin_top = 1.0
+margin_right = 210.0
+margin_bottom = 208.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnConfig" type="TextureRect" parent="HUD/Bg"]
+margin_left = 371.915
+margin_top = 776.272
+margin_right = 585.915
+margin_bottom = 991.272
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="TextureRect" parent="HUD/Bg/btnConfig"]
+margin_left = 30.5165
+margin_top = 222.596
+margin_right = 176.516
+margin_bottom = 252.596
+texture = ExtResource( 12 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texture" type="TextureButton" parent="HUD/Bg/btnConfig"]
+margin_left = 31.0
+margin_top = 20.0
+margin_right = 183.0
+margin_bottom = 172.0
+texture_normal = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn" type="Button" parent="HUD/Bg/btnConfig"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 211.0
+margin_bottom = 208.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnLogin" type="TextureRect" parent="HUD/Bg"]
+margin_left = 304.898
+margin_top = 1121.47
+margin_right = 420.898
+margin_bottom = 1151.47
+texture = ExtResource( 15 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texture" type="TextureButton" parent="HUD/Bg/btnLogin"]
+margin_left = -160.898
+margin_top = -36.4696
+margin_right = 280.102
+margin_bottom = 68.5304
+texture_normal = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnLogin" type="Button" parent="HUD/Bg/btnLogin"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -153.0
+margin_top = -30.0
+margin_right = 273.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Effet" type="Tween" parent="."]
+
+[connection signal="pressed" from="HUD/Bg/btnGame/btn" to="." method="_on_btnGame_pressed"]
+[connection signal="pressed" from="HUD/Bg/btnPractice/btn" to="." method="_on_btnPractice_pressed"]
+[connection signal="pressed" from="HUD/Bg/btnAbout/btn" to="." method="_on_btnCredit_pressed"]
+[connection signal="pressed" from="HUD/Bg/btnConfig/btn" to="." method="_on_btnConfig_pressed"]
+[connection signal="pressed" from="HUD/Bg/btnLogin/btnLogin" to="." method="_on_btnLogin_pressed"]

@@ -38,3 +38,11 @@ func _on_btnPractice_pressed():
 
 func _on_btnLogin_pressed():
 	pass # Replace with function body.
+
+
+func _on_btnGame_gui_input(event):
+	if event.is_pressed():
+		print("click")
+		$Effet.interpolate_property($HUD/Bg/btnGame, 'transform/scale',
+		$HUD/Bg/btnGame.get_scale(), Vector2(2.0, 2.0), 0.3,
+		Tween.TRANS_QUAD, Tween.EASE_OUT) 
