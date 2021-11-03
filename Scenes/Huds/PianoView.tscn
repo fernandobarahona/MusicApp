@@ -1,7 +1,6 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=113 format=2]
 
-[ext_resource path="res://Theme/white_piano_key.tres" type="Theme" id=1]
-[ext_resource path="res://Theme/black_piano_key.tres" type="Theme" id=2]
+[ext_resource path="res://Scripts/Piano/PianoKey.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Piano/PianoPlay.gd" type="Script" id=3]
 [ext_resource path="res://Audios/Keys/A4.wav" type="AudioStream" id=4]
 [ext_resource path="res://Audios/Keys/B4.wav" type="AudioStream" id=5]
@@ -84,12 +83,214 @@
 [ext_resource path="res://Audios/Keys/Ab5.wav" type="AudioStream" id=82]
 [ext_resource path="res://Audios/Keys/Ab1.wav" type="AudioStream" id=83]
 [ext_resource path="res://Audios/Keys/Ab3.wav" type="AudioStream" id=84]
+[ext_resource path="res://fonts/Roboto-Black.ttf" type="DynamicFontData" id=85]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="Theme" id=2]
 Panel/styles/panel = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 250
+font_data = ExtResource( 85 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=20]
+font_data = ExtResource( 85 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
 
 [node name="Piano" type="Control"]
 anchor_right = 1.0
@@ -118,42 +319,56 @@ margin_left = 31.0
 margin_top = 942.854
 margin_right = 126.0
 margin_bottom = 1272.85
-theme = ExtResource( 1 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "C"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+btn_color = Color( 1, 1, 1, 1 )
 
 [node name="Player1" type="AudioStreamPlayer2D" parent="C"]
 stream = ExtResource( 16 )
+volume_db = 24.0
 attenuation = 2.0
 
 [node name="Player2" type="AudioStreamPlayer2D" parent="C"]
 stream = ExtResource( 17 )
+volume_db = 24.0
 attenuation = 2.0
 
 [node name="Player3" type="AudioStreamPlayer2D" parent="C"]
 stream = ExtResource( 18 )
+volume_db = 24.0
 attenuation = 2.0
 
 [node name="Player4" type="AudioStreamPlayer2D" parent="C"]
 stream = ExtResource( 6 )
+volume_db = 24.0
 attenuation = 2.0
 
 [node name="Player5" type="AudioStreamPlayer2D" parent="C"]
 stream = ExtResource( 6 )
+volume_db = 24.0
 attenuation = 2.0
 
 [node name="Player6" type="AudioStreamPlayer2D" parent="C"]
 stream = ExtResource( 20 )
+volume_db = 24.0
 attenuation = 2.0
 
 [node name="Player7" type="AudioStreamPlayer2D" parent="C"]
 stream = ExtResource( 21 )
+volume_db = 24.0
 attenuation = 2.0
 
 [node name="Player8" type="AudioStreamPlayer2D" parent="C"]
 stream = ExtResource( 19 )
+volume_db = 24.0
 attenuation = 2.0
 
 [node name="D" type="Button" parent="."]
@@ -161,84 +376,112 @@ margin_left = 126.0
 margin_top = 944.158
 margin_right = 221.0
 margin_bottom = 1273.16
-theme = ExtResource( 1 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "D"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+key_note = 1
+btn_color = Color( 1, 1, 1, 1 )
 
 [node name="Player1" type="AudioStreamPlayer2D" parent="D"]
 position = Vector2( -79.8014, -1.146 )
 stream = ExtResource( 23 )
+volume_db = 24.0
 
 [node name="Player2" type="AudioStreamPlayer2D" parent="D"]
 position = Vector2( -79.8014, -1.146 )
 stream = ExtResource( 25 )
+volume_db = 24.0
 
 [node name="Player3" type="AudioStreamPlayer2D" parent="D"]
 position = Vector2( -79.8014, -1.146 )
 stream = ExtResource( 26 )
+volume_db = 24.0
 
 [node name="Player4" type="AudioStreamPlayer2D" parent="D"]
 position = Vector2( -79.8014, -1.146 )
 stream = ExtResource( 7 )
+volume_db = 24.0
 
 [node name="Player5" type="AudioStreamPlayer2D" parent="D"]
 position = Vector2( -79.8014, -1.146 )
 stream = ExtResource( 22 )
+volume_db = 24.0
 
 [node name="Player6" type="AudioStreamPlayer2D" parent="D"]
 position = Vector2( -79.8014, -1.146 )
 stream = ExtResource( 24 )
+volume_db = 24.0
 
 [node name="Player7" type="AudioStreamPlayer2D" parent="D"]
 position = Vector2( -79.8014, -1.146 )
 stream = ExtResource( 27 )
+volume_db = 24.0
 
 [node name="E" type="Button" parent="."]
 margin_left = 221.0
 margin_top = 942.854
 margin_right = 316.0
 margin_bottom = 1272.85
-theme = ExtResource( 1 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "E"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+key_note = 2
+btn_color = Color( 1, 1, 1, 1 )
 
 [node name="Player1" type="AudioStreamPlayer2D" parent="E"]
 position = Vector2( -158.656, 0 )
 stream = ExtResource( 30 )
+volume_db = 24.0
 attenuation = 0.707107
 
 [node name="Player2" type="AudioStreamPlayer2D" parent="E"]
 position = Vector2( -158.656, 0 )
 stream = ExtResource( 28 )
+volume_db = 24.0
 attenuation = 0.707107
 
 [node name="Player3" type="AudioStreamPlayer2D" parent="E"]
 position = Vector2( -158.656, 0 )
 stream = ExtResource( 33 )
+volume_db = 24.0
 attenuation = 0.707107
 
 [node name="Player4" type="AudioStreamPlayer2D" parent="E"]
 position = Vector2( -158.656, 0 )
 stream = ExtResource( 10 )
+volume_db = 24.0
 attenuation = 0.707107
 
 [node name="Player5" type="AudioStreamPlayer2D" parent="E"]
 position = Vector2( -158.656, 0 )
 stream = ExtResource( 31 )
+volume_db = 24.0
 attenuation = 0.707107
 
 [node name="Player6" type="AudioStreamPlayer2D" parent="E"]
 position = Vector2( -158.656, 0 )
 stream = ExtResource( 29 )
+volume_db = 24.0
 attenuation = 0.707107
 
 [node name="Player7" type="AudioStreamPlayer2D" parent="E"]
 position = Vector2( -158.656, 0 )
 stream = ExtResource( 32 )
+volume_db = 24.0
 attenuation = 0.707107
 
 [node name="F" type="Button" parent="."]
@@ -246,330 +489,445 @@ margin_left = 316.0
 margin_top = 942.854
 margin_right = 411.0
 margin_bottom = 1272.85
-theme = ExtResource( 1 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "F"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+key_note = 3
+btn_color = Color( 1, 1, 1, 1 )
 
 [node name="Player1" type="AudioStreamPlayer2D" parent="F"]
 position = Vector2( -237.656, 0 )
 stream = ExtResource( 34 )
+volume_db = 24.0
 
 [node name="Player2" type="AudioStreamPlayer2D" parent="F"]
 position = Vector2( -237.656, 0 )
 stream = ExtResource( 36 )
+volume_db = 24.0
 
 [node name="Player3" type="AudioStreamPlayer2D" parent="F"]
 position = Vector2( -237.656, 0 )
 stream = ExtResource( 35 )
+volume_db = 24.0
 
 [node name="Player4" type="AudioStreamPlayer2D" parent="F"]
 position = Vector2( -237.656, 0 )
 stream = ExtResource( 8 )
+volume_db = 24.0
 
 [node name="Player5" type="AudioStreamPlayer2D" parent="F"]
 position = Vector2( -237.656, 0 )
 stream = ExtResource( 37 )
+volume_db = 24.0
 
 [node name="Player6" type="AudioStreamPlayer2D" parent="F"]
 position = Vector2( -237.656, 0 )
 stream = ExtResource( 38 )
+volume_db = 24.0
 
 [node name="Player7" type="AudioStreamPlayer2D" parent="F"]
 position = Vector2( -237.656, 0 )
 stream = ExtResource( 39 )
+volume_db = 24.0
 
 [node name="G" type="Button" parent="."]
 margin_left = 411.0
 margin_top = 944.158
 margin_right = 506.0
 margin_bottom = 1273.16
-theme = ExtResource( 1 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "G"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+key_note = 4
+btn_color = Color( 1, 1, 1, 1 )
 
 [node name="Player1" type="AudioStreamPlayer2D" parent="G"]
 position = Vector2( -316.801, -0.157959 )
 stream = ExtResource( 40 )
+volume_db = 24.0
 
 [node name="Player2" type="AudioStreamPlayer2D" parent="G"]
 position = Vector2( -316.801, -0.157959 )
 stream = ExtResource( 41 )
+volume_db = 24.0
 
 [node name="Player3" type="AudioStreamPlayer2D" parent="G"]
 position = Vector2( -316.801, -0.157959 )
 stream = ExtResource( 42 )
+volume_db = 24.0
 
 [node name="Player4" type="AudioStreamPlayer2D" parent="G"]
 position = Vector2( -316.801, -0.157959 )
 stream = ExtResource( 9 )
+volume_db = 24.0
 
 [node name="Player5" type="AudioStreamPlayer2D" parent="G"]
 position = Vector2( -316.801, -0.157959 )
 stream = ExtResource( 43 )
+volume_db = 24.0
 
 [node name="Player6" type="AudioStreamPlayer2D" parent="G"]
 position = Vector2( -316.801, -0.157959 )
 stream = ExtResource( 44 )
+volume_db = 24.0
 
 [node name="Player7" type="AudioStreamPlayer2D" parent="G"]
 position = Vector2( -316.801, -0.157959 )
 stream = ExtResource( 45 )
+volume_db = 24.0
 
 [node name="A" type="Button" parent="."]
 margin_left = 506.0
 margin_top = 944.158
 margin_right = 601.0
 margin_bottom = 1273.16
-theme = ExtResource( 1 )
+custom_styles/focus = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "A"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+key_note = 5
+btn_color = Color( 1, 1, 1, 1 )
 
 [node name="Player0" type="AudioStreamPlayer2D" parent="A"]
 position = Vector2( -395.801, -0.157959 )
 stream = ExtResource( 47 )
+volume_db = 24.0
 
 [node name="Player1" type="AudioStreamPlayer2D" parent="A"]
 position = Vector2( -395.801, -0.157959 )
 stream = ExtResource( 46 )
+volume_db = 24.0
 
 [node name="Player2" type="AudioStreamPlayer2D" parent="A"]
 position = Vector2( -395.801, -0.157959 )
 stream = ExtResource( 48 )
+volume_db = 24.0
 
 [node name="Player3" type="AudioStreamPlayer2D" parent="A"]
 position = Vector2( -395.801, -0.157959 )
 stream = ExtResource( 49 )
+volume_db = 24.0
 
 [node name="Player4" type="AudioStreamPlayer2D" parent="A"]
 position = Vector2( -395.801, -0.157959 )
 stream = ExtResource( 4 )
+volume_db = 24.0
 
 [node name="Player5" type="AudioStreamPlayer2D" parent="A"]
 position = Vector2( -395.801, -0.157959 )
 stream = ExtResource( 50 )
+volume_db = 24.0
 
 [node name="Player6" type="AudioStreamPlayer2D" parent="A"]
 position = Vector2( -395.801, -0.157959 )
 stream = ExtResource( 51 )
+volume_db = 24.0
 
 [node name="Player7" type="AudioStreamPlayer2D" parent="A"]
 position = Vector2( -395.801, -0.157959 )
 stream = ExtResource( 52 )
+volume_db = 24.0
 
 [node name="B" type="Button" parent="."]
 margin_left = 601.0
 margin_top = 944.158
 margin_right = 696.0
 margin_bottom = 1273.16
-theme = ExtResource( 1 )
+custom_styles/focus = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "B"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+key_note = 6
+btn_color = Color( 1, 1, 1, 1 )
 
 [node name="Player0" type="AudioStreamPlayer2D" parent="B"]
 position = Vector2( -474.801, -0.157959 )
 stream = ExtResource( 53 )
+volume_db = 24.0
 
 [node name="Player1" type="AudioStreamPlayer2D" parent="B"]
 position = Vector2( -474.801, -0.157959 )
 stream = ExtResource( 59 )
+volume_db = 24.0
 
 [node name="Player2" type="AudioStreamPlayer2D" parent="B"]
 position = Vector2( -474.801, -0.157959 )
 stream = ExtResource( 54 )
+volume_db = 24.0
 
 [node name="Player3" type="AudioStreamPlayer2D" parent="B"]
 position = Vector2( -474.801, -0.157959 )
 stream = ExtResource( 55 )
+volume_db = 24.0
 
 [node name="Player4" type="AudioStreamPlayer2D" parent="B"]
 position = Vector2( -474.801, -0.157959 )
 stream = ExtResource( 5 )
+volume_db = 24.0
 
 [node name="Player5" type="AudioStreamPlayer2D" parent="B"]
 position = Vector2( -474.801, -0.157959 )
 stream = ExtResource( 58 )
+volume_db = 24.0
 
 [node name="Player6" type="AudioStreamPlayer2D" parent="B"]
 position = Vector2( -474.801, -0.157959 )
 stream = ExtResource( 56 )
+volume_db = 24.0
 
 [node name="Player7" type="AudioStreamPlayer2D" parent="B"]
 position = Vector2( -474.801, -0.157959 )
 stream = ExtResource( 57 )
+volume_db = 24.0
 
 [node name="Db" type="Button" parent="."]
 margin_left = 90.0
 margin_top = 943.0
 margin_right = 157.0
 margin_bottom = 1145.0
-theme = ExtResource( 2 )
+custom_styles/focus = SubResource( 18 )
+custom_styles/normal = SubResource( 19 )
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Db"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+key_note = 7
 
 [node name="Player0" type="AudioStreamPlayer2D" parent="Db"]
 position = Vector2( -55.6555, 0 )
 stream = ExtResource( 61 )
+volume_db = 24.0
 
 [node name="Player1" type="AudioStreamPlayer2D" parent="Db"]
 position = Vector2( -55.6555, 0 )
 stream = ExtResource( 64 )
+volume_db = 24.0
 
 [node name="Player2" type="AudioStreamPlayer2D" parent="Db"]
 position = Vector2( -55.6555, 0 )
 stream = ExtResource( 63 )
+volume_db = 24.0
 
 [node name="Player3" type="AudioStreamPlayer2D" parent="Db"]
 position = Vector2( -55.6555, 0 )
 stream = ExtResource( 65 )
+volume_db = 24.0
 
 [node name="Player4" type="AudioStreamPlayer2D" parent="Db"]
 position = Vector2( -55.6555, 0 )
 stream = ExtResource( 13 )
+volume_db = 24.0
 
 [node name="Player5" type="AudioStreamPlayer2D" parent="Db"]
 position = Vector2( -55.6555, 0 )
 stream = ExtResource( 66 )
+volume_db = 24.0
 
 [node name="Player6" type="AudioStreamPlayer2D" parent="Db"]
 position = Vector2( -55.6555, 0 )
 stream = ExtResource( 60 )
+volume_db = 24.0
 
 [node name="Player7" type="AudioStreamPlayer2D" parent="Db"]
 position = Vector2( -55.6555, 0 )
 stream = ExtResource( 62 )
+volume_db = 24.0
 
 [node name="Eb" type="Button" parent="."]
 margin_left = 189.0
 margin_top = 943.0
 margin_right = 256.0
 margin_bottom = 1145.0
-theme = ExtResource( 2 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/normal = SubResource( 22 )
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Eb"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+key_note = 8
 
 [node name="Player1" type="AudioStreamPlayer2D" parent="Eb"]
 position = Vector2( -132.644, -0.157959 )
 stream = ExtResource( 72 )
+volume_db = 24.0
 
 [node name="Player2" type="AudioStreamPlayer2D" parent="Eb"]
 position = Vector2( -132.644, -0.157959 )
 stream = ExtResource( 69 )
+volume_db = 24.0
 
 [node name="Player3" type="AudioStreamPlayer2D" parent="Eb"]
 position = Vector2( -132.644, -0.157959 )
 stream = ExtResource( 70 )
+volume_db = 24.0
 
 [node name="Player4" type="AudioStreamPlayer2D" parent="Eb"]
 position = Vector2( -132.644, -0.157959 )
 stream = ExtResource( 14 )
+volume_db = 24.0
 
 [node name="Player5" type="AudioStreamPlayer2D" parent="Eb"]
 position = Vector2( -132.644, -0.157959 )
 stream = ExtResource( 67 )
+volume_db = 24.0
 
 [node name="Player6" type="AudioStreamPlayer2D" parent="Eb"]
 position = Vector2( -132.644, -0.157959 )
 stream = ExtResource( 68 )
+volume_db = 24.0
 
 [node name="Player7" type="AudioStreamPlayer2D" parent="Eb"]
 position = Vector2( -132.644, -0.157959 )
 stream = ExtResource( 71 )
+volume_db = 24.0
 
 [node name="Gb" type="Button" parent="."]
 margin_left = 377.0
 margin_top = 943.0
 margin_right = 444.0
 margin_bottom = 1145.0
-theme = ExtResource( 2 )
+custom_styles/focus = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Gb"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+key_note = 9
 
 [node name="Player1" type="AudioStreamPlayer2D" parent="Gb"]
 position = Vector2( -291.96, 0 )
 stream = ExtResource( 77 )
+volume_db = 24.0
 
 [node name="Player2" type="AudioStreamPlayer2D" parent="Gb"]
 position = Vector2( -291.96, 0 )
 stream = ExtResource( 76 )
+volume_db = 24.0
 
 [node name="Player3" type="AudioStreamPlayer2D" parent="Gb"]
 position = Vector2( -291.96, 0 )
 stream = ExtResource( 75 )
+volume_db = 24.0
 
 [node name="Player4" type="AudioStreamPlayer2D" parent="Gb"]
 position = Vector2( -291.96, 0 )
 stream = ExtResource( 11 )
+volume_db = 24.0
 
 [node name="Player5" type="AudioStreamPlayer2D" parent="Gb"]
 position = Vector2( -291.96, 0 )
 stream = ExtResource( 78 )
+volume_db = 24.0
 
 [node name="Player6" type="AudioStreamPlayer2D" parent="Gb"]
 position = Vector2( -291.96, 0 )
 stream = ExtResource( 74 )
+volume_db = 24.0
 
 [node name="Player7" type="AudioStreamPlayer2D" parent="Gb"]
 position = Vector2( -291.96, 0 )
 stream = ExtResource( 73 )
+volume_db = 24.0
 
 [node name="Ab" type="Button" parent="."]
 margin_left = 473.0
 margin_top = 943.0
 margin_right = 540.0
 margin_bottom = 1145.0
-theme = ExtResource( 2 )
+custom_styles/focus = SubResource( 25 )
+custom_styles/normal = SubResource( 26 )
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Ab"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+key_note = 10
 
 [node name="Player1" type="AudioStreamPlayer2D" parent="Ab"]
 position = Vector2( -370.011, -0.157959 )
 stream = ExtResource( 83 )
+volume_db = 24.0
 attenuation = 0.225313
 
 [node name="Player2" type="AudioStreamPlayer2D" parent="Ab"]
 position = Vector2( -370.011, -0.157959 )
 stream = ExtResource( 80 )
+volume_db = 24.0
 attenuation = 0.225313
 
 [node name="Player3" type="AudioStreamPlayer2D" parent="Ab"]
 position = Vector2( -370.011, -0.157959 )
 stream = ExtResource( 84 )
+volume_db = 24.0
 attenuation = 0.225313
 
 [node name="Player4" type="AudioStreamPlayer2D" parent="Ab"]
 position = Vector2( -370.011, -0.157959 )
 stream = ExtResource( 12 )
+volume_db = 24.0
 attenuation = 0.225313
 
 [node name="Player5" type="AudioStreamPlayer2D" parent="Ab"]
 position = Vector2( -370.011, -0.157959 )
 stream = ExtResource( 82 )
+volume_db = 24.0
 attenuation = 0.225313
 
 [node name="Player6" type="AudioStreamPlayer2D" parent="Ab"]
 position = Vector2( -370.011, -0.157959 )
 stream = ExtResource( 79 )
+volume_db = 24.0
 attenuation = 0.225313
 
 [node name="Player7" type="AudioStreamPlayer2D" parent="Ab"]
 position = Vector2( -370.011, -0.157959 )
 stream = ExtResource( 81 )
+volume_db = 24.0
 attenuation = 0.225313
 
 [node name="Bb" type="Button" parent="."]
@@ -577,50 +935,65 @@ margin_left = 567.0
 margin_top = 943.0
 margin_right = 634.0
 margin_bottom = 1145.0
-theme = ExtResource( 2 )
+custom_styles/focus = SubResource( 27 )
+custom_styles/normal = SubResource( 28 )
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Bb"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+key_note = 11
 
 [node name="Player0" type="AudioStreamPlayer2D" parent="Bb"]
 position = Vector2( -449.178, -0.157959 )
 stream = ExtResource( 61 )
+volume_db = 24.0
 attenuation = 0.143587
 
 [node name="Player1" type="AudioStreamPlayer2D" parent="Bb"]
 position = Vector2( -449.178, -0.157959 )
 stream = ExtResource( 64 )
+volume_db = 24.0
 attenuation = 0.143587
 
 [node name="Player2" type="AudioStreamPlayer2D" parent="Bb"]
 position = Vector2( -449.178, -0.157959 )
 stream = ExtResource( 63 )
+volume_db = 24.0
 attenuation = 0.143587
 
 [node name="Player3" type="AudioStreamPlayer2D" parent="Bb"]
 position = Vector2( -449.178, -0.157959 )
 stream = ExtResource( 65 )
+volume_db = 24.0
 attenuation = 0.143587
 
 [node name="Player4" type="AudioStreamPlayer2D" parent="Bb"]
 position = Vector2( -449.178, -0.157959 )
 stream = ExtResource( 15 )
+volume_db = 24.0
 attenuation = 0.143587
 
 [node name="Player5" type="AudioStreamPlayer2D" parent="Bb"]
 position = Vector2( -449.178, -0.157959 )
 stream = ExtResource( 66 )
+volume_db = 24.0
 attenuation = 0.143587
 
 [node name="Player6" type="AudioStreamPlayer2D" parent="Bb"]
 position = Vector2( -449.178, -0.157959 )
 stream = ExtResource( 60 )
+volume_db = 24.0
 attenuation = 0.143587
 
 [node name="Player7" type="AudioStreamPlayer2D" parent="Bb"]
 position = Vector2( -449.178, -0.157959 )
 stream = ExtResource( 62 )
+volume_db = 24.0
 attenuation = 0.143587
 
 [connection signal="button_down" from="C" to="." method="_on_C_button_down"]
