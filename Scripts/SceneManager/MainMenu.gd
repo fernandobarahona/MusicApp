@@ -21,6 +21,9 @@ func _exit_tree():
 
 
 func _on_btnGame_pressed():
+	$Effet.interpolate_property($HUD/Bg/btnGame, 'rect/scale',
+	$HUD/Bg/btnGame.get_scale(), Vector2(2.0, 2.0), 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN)
+	$Effet.start()
 	get_tree().change_scene("res://Scenes/Mains/GameScene.tscn")
 
 
@@ -40,9 +43,3 @@ func _on_btnLogin_pressed():
 	pass # Replace with function body.
 
 
-func _on_btnGame_gui_input(event):
-	if event.is_pressed():
-		print("click")
-		$Effet.interpolate_property($HUD/Bg/btnGame, 'transform/scale',
-		$HUD/Bg/btnGame.get_scale(), Vector2(2.0, 2.0), 0.3,
-		Tween.TRANS_QUAD, Tween.EASE_OUT) 

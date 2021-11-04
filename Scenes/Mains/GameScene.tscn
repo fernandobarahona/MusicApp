@@ -1,11 +1,26 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://fonts/Bubblegum.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/SceneManager/GameScene.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Huds/PopupLeave.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Huds/PianoView.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Huds/SheetView.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Sprites/Design/gameplay/_0019_bg.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Design/gameplay/gameplay.jpg" type="Texture" id=6]
+[ext_resource path="res://Sprites/Design/gameplay/_0019_bg.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Design/gameplay/_0008_buttons.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Design/gameplay/_0004_Rectangle-5-copy-7.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Design/gameplay/_0005_Rectangle-5-copy-5.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Design/gameplay/_0003_Polygon-1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Design/gameplay/_0001_Layer-64.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Design/gameplay/_0002_Layer-65.png" type="Texture" id=13]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 99, 87 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 99, 87 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -24,19 +39,8 @@ __meta__ = {
 [node name="bg" type="TextureRect" parent="HUD"]
 margin_right = 720.0
 margin_bottom = 1280.0
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="btnConfig" type="Button" parent="HUD"]
-margin_left = 445.258
-margin_top = 11.2132
-margin_right = 707.258
-margin_bottom = 62.2132
-custom_fonts/font = SubResource( 1 )
-text = "Config"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -47,6 +51,73 @@ margin_left = 84.0133
 margin_top = 344.478
 margin_right = 84.0133
 margin_bottom = 344.478
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+visible = false
+margin_right = 720.0
+margin_bottom = 1280.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnConfig" type="Button" parent="HUD"]
+margin_left = 645.0
+margin_top = 86.0
+margin_right = 704.0
+margin_bottom = 137.0
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="HUD"]
+margin_left = 87.0
+margin_top = 134.0
+margin_right = 410.0
+margin_bottom = 154.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="HUD"]
+margin_left = 86.0
+margin_top = 89.0
+margin_right = 567.0
+margin_bottom = 131.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="HUD"]
+margin_left = 10.715
+margin_top = 39.6854
+margin_right = 128.715
+margin_bottom = 176.685
+texture = ExtResource( 11 )
+expand = true
+
+[node name="TextureRect5" type="TextureRect" parent="HUD"]
+margin_left = 47.7387
+margin_top = 75.3182
+margin_right = 88.7387
+margin_bottom = 108.318
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect6" type="TextureRect" parent="HUD"]
+margin_left = 47.3297
+margin_top = 117.898
+margin_right = 84.3297
+margin_bottom = 154.898
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 6
 
 [node name="Piano" parent="." instance=ExtResource( 4 )]
 

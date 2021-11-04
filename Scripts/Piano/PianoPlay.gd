@@ -19,6 +19,7 @@ func _ready():
 func _on_C_button_down():
 
 	emit_signal("piano_key_pressed", Note.new(GameManager.Notes.C,octave), $C)
+
 	match octave:
 		GameManager.Octave.oct_1: $C/Player1.play()
 		GameManager.Octave.oct_2: $C/Player2.play()
