@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://fonts/Bubblegum.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/SceneManager/ConfigMenu.gd" type="Script" id=2]
+[ext_resource path="res://fonts/Roboto-Black.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Sprites/Design/config/_0014_bg.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Design/config/_0013_Rectangle-1-copy-3.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Design/config/_0010_BACK.png" type="Texture" id=6]
@@ -33,7 +34,7 @@ font_data = ExtResource( 1 )
 size = 30
 font_data = ExtResource( 1 )
 
-[sub_resource type="Theme" id=6]
+[sub_resource type="Theme" id=5]
 CheckBox/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
 CheckBox/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 CheckBox/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
@@ -53,7 +54,15 @@ CheckBox/styles/hover_pressed = null
 CheckBox/styles/normal = null
 CheckBox/styles/pressed = null
 
-[sub_resource type="Theme" id=7]
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.0627451, 0.0666667, 0.2, 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=9]
+default_font = SubResource( 8 )
 OptionButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
 OptionButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 OptionButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
@@ -73,7 +82,7 @@ PopupMenu/colors/font_color_disabled = Color( 0.4, 0.4, 0.4, 0.8 )
 PopupMenu/colors/font_color_hover = Color( 0.88, 0.88, 0.88, 1 )
 PopupMenu/colors/font_color_separator = Color( 0.88, 0.88, 0.88, 1 )
 PopupMenu/constants/hseparation = 4
-PopupMenu/constants/vseparation = 4
+PopupMenu/constants/vseparation = 10
 PopupMenu/fonts/font = null
 PopupMenu/icons/checked = null
 PopupMenu/icons/radio_checked = null
@@ -83,9 +92,33 @@ PopupMenu/icons/unchecked = null
 PopupMenu/styles/hover = null
 PopupMenu/styles/labeled_separator_left = null
 PopupMenu/styles/labeled_separator_right = null
-PopupMenu/styles/panel = null
+PopupMenu/styles/panel = SubResource( 15 )
 PopupMenu/styles/panel_disabled = null
 PopupMenu/styles/separator = null
+
+[sub_resource type="StyleBoxTexture" id=16]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 297, 116 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 297, 116 )
+
+[sub_resource type="StyleBoxTexture" id=14]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 297, 116 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 297, 116 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 297, 116 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 25
+font_data = ExtResource( 3 )
 
 [node name="ConfigScene" type="Node2D"]
 script = ExtResource( 2 )
@@ -175,7 +208,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="HUD/bg"]
+[node name="TextureSpeed" type="TextureRect" parent="HUD/bg"]
 margin_left = 118.231
 margin_top = 468.742
 margin_right = 222.231
@@ -183,7 +216,7 @@ margin_bottom = 488.742
 texture = ExtResource( 9 )
 expand = true
 
-[node name="TextureRect2" type="TextureRect" parent="HUD/bg"]
+[node name="TextureAutoSlow" type="TextureRect" parent="HUD/bg"]
 margin_left = 118.0
 margin_top = 571.0
 margin_right = 308.0
@@ -191,7 +224,7 @@ margin_bottom = 591.0
 texture = ExtResource( 10 )
 expand = true
 
-[node name="TextureRect3" type="TextureRect" parent="HUD/bg"]
+[node name="Texturebackground" type="TextureRect" parent="HUD/bg"]
 margin_left = 120.0
 margin_top = 673.0
 margin_right = 330.0
@@ -205,24 +238,9 @@ margin_top = 543.568
 margin_right = 567.945
 margin_bottom = 678.568
 rect_scale = Vector2( 0.560005, 0.560005 )
-theme = SubResource( 6 )
+theme = SubResource( 5 )
 pressed = true
 expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="OptionButton" type="OptionButton" parent="HUD/bg"]
-margin_left = 382.606
-margin_top = 652.524
-margin_right = 715.606
-margin_bottom = 773.524
-rect_scale = Vector2( 0.519998, 0.519998 )
-theme = SubResource( 7 )
-text = "BG1"
-align = 1
-items = [ "BG1", null, false, 0, null, "BG2", null, false, 1, null, "BG3", null, false, 2, null ]
-selected = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -250,7 +268,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btnLogin" type="TextureRect" parent="HUD/bg"]
+[node name="OptionButton" type="OptionButton" parent="HUD/bg"]
+margin_left = 336.0
+margin_top = 653.0
+margin_right = 805.0
+margin_bottom = 774.0
+rect_scale = Vector2( 0.519998, 0.519998 )
+theme = SubResource( 9 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 14 )
+custom_styles/disabled = SubResource( 13 )
+custom_styles/normal = SubResource( 12 )
+text = "BG1"
+align = 1
+items = [ "BG1", null, false, 0, null, "BG2", null, false, 1, null, "BG3", null, false, 2, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnBack" type="TextureRect" parent="HUD/bg"]
 margin_left = 306.0
 margin_top = 1123.0
 margin_right = 409.0
@@ -261,15 +299,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="HUD/bg/btnLogin"]
+[node name="TextureRect" type="TextureRect" parent="HUD/bg/btnBack"]
 margin_left = -172.0
 margin_top = -36.0
 margin_right = 275.0
 margin_bottom = 70.0
 texture = ExtResource( 7 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="btn" type="Button" parent="HUD/bg/btnLogin"]
+[node name="btnBack" type="Button" parent="HUD/bg/btnBack"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = -166.0
 margin_top = -30.0
@@ -287,37 +328,66 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btnAdd" type="TextureRect" parent="HUD/bg/pnaleSpeed"]
-margin_left = 147.54
-margin_top = -5.59476
-margin_right = 214.54
-margin_bottom = 61.4052
+[node name="btnAdd" type="Position2D" parent="HUD/bg/pnaleSpeed"]
+position = Vector2( 181.971, 27.7282 )
+
+[node name="texture" type="TextureRect" parent="HUD/bg/pnaleSpeed/btnAdd"]
+margin_left = -34.4315
+margin_top = -33.3229
+margin_right = 32.5685
+margin_bottom = 33.677
 texture = ExtResource( 14 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="btn" type="Button" parent="HUD/bg/pnaleSpeed/btnAdd"]
+[node name="btnAdd" type="Button" parent="HUD/bg/pnaleSpeed/btnAdd/texture"]
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 69.0
 margin_bottom = 69.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="btnAdd2" type="TextureRect" parent="HUD/bg/pnaleSpeed"]
-margin_left = -24.6605
-margin_top = -4.89835
-margin_right = 42.3395
-margin_bottom = 62.1017
+[node name="btnRemove" type="Position2D" parent="HUD/bg/pnaleSpeed"]
+position = Vector2( 6.55777, 28.8426 )
+
+[node name="texture" type="TextureRect" parent="HUD/bg/pnaleSpeed/btnRemove"]
+margin_left = -31.2183
+margin_top = -33.7409
+margin_right = 35.7817
+margin_bottom = 33.2591
 texture = ExtResource( 15 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="btn" type="Button" parent="HUD/bg/pnaleSpeed/btnAdd2"]
+[node name="btnRemove" type="Button" parent="HUD/bg/pnaleSpeed/btnRemove/texture"]
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 69.0
 margin_bottom = 69.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="HUD/bg/pnaleSpeed"]
-margin_left = 71.0363
-margin_top = 23.4142
-margin_right = 112.036
-margin_bottom = 37.4142
+margin_left = 53.6913
+margin_top = 13.0692
+margin_right = 140.691
+margin_bottom = 44.0692
+custom_fonts/font = SubResource( 10 )
 text = "50k/m"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[connection signal="pressed" from="HUD/bg/btnLogin/btn" to="." method="_on_btn_pressed"]
+[node name="Effet" type="Tween" parent="."]
+
+[connection signal="button_down" from="HUD/bg/btnBack/btnBack" to="." method="_on_btnBack_button_down"]
+[connection signal="pressed" from="HUD/bg/btnBack/btnBack" to="." method="_on_btn_pressed"]
+[connection signal="button_down" from="HUD/bg/pnaleSpeed/btnAdd/texture/btnAdd" to="." method="_on_btnAdd_button_down"]
+[connection signal="pressed" from="HUD/bg/pnaleSpeed/btnAdd/texture/btnAdd" to="." method="_on_btnAdd_pressed"]
+[connection signal="button_down" from="HUD/bg/pnaleSpeed/btnRemove/texture/btnRemove" to="." method="_on_btnRemove_button_down"]
+[connection signal="pressed" from="HUD/bg/pnaleSpeed/btnRemove/texture/btnRemove" to="." method="_on_btnRemove_pressed"]

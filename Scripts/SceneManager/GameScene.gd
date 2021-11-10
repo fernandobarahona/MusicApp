@@ -28,3 +28,8 @@ func _notification(what):
 
 func _on_btnConfig_pressed():
 	get_tree().change_scene("res://Scenes/Mains/ConfigMenu.tscn")
+
+
+func _on_btnConfig_button_down():
+	$Effet.interpolate_property($HUD/btnConfig, 'rect_scale', $HUD/btnConfig.get_scale(), Vector2(1.2, 1.2), 0.3, Tween.TRANS_QUAD, Tween.EASE_OUT)
+	$Effet.start()

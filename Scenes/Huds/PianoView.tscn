@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=2]
+[gd_scene load_steps=146 format=2]
 
 [ext_resource path="res://Scripts/Piano/PianoKey.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Design/gameplay/_0012_Layer-76-copy-5.png" type="Texture" id=2]
@@ -96,7 +96,11 @@
 [ext_resource path="res://Audios/Keys/Db3.wav" type="AudioStream" id=95]
 [ext_resource path="res://Audios/Keys/Db4.wav" type="AudioStream" id=96]
 
-[sub_resource type="StyleBoxTexture" id=27]
+[sub_resource type="StyleBoxTexture" id=39]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 177, 514 )
+
+[sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
@@ -104,13 +108,17 @@ region_rect = Rect2( 0, 0, 177, 514 )
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 177, 514 )
+
+[sub_resource type="DynamicFont" id=4]
 size = 20
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_top = 250
 font_data = ExtResource( 85 )
 
-[sub_resource type="StyleBoxTexture" id=28]
+[sub_resource type="StyleBoxTexture" id=41]
 texture = ExtResource( 87 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
@@ -118,7 +126,7 @@ region_rect = Rect2( 0, 0, 177, 514 )
 texture = ExtResource( 87 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
-[sub_resource type="StyleBoxTexture" id=29]
+[sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 87 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
@@ -126,7 +134,11 @@ region_rect = Rect2( 0, 0, 177, 514 )
 texture = ExtResource( 87 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
-[sub_resource type="StyleBoxTexture" id=30]
+[sub_resource type="StyleBoxTexture" id=42]
+texture = ExtResource( 87 )
+region_rect = Rect2( 0, 0, 177, 514 )
+
+[sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 87 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
@@ -134,7 +146,11 @@ region_rect = Rect2( 0, 0, 177, 514 )
 texture = ExtResource( 87 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
-[sub_resource type="StyleBoxTexture" id=31]
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 87 )
+region_rect = Rect2( 0, 0, 177, 514 )
+
+[sub_resource type="StyleBoxTexture" id=43]
 texture = ExtResource( 87 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
@@ -142,7 +158,7 @@ region_rect = Rect2( 0, 0, 177, 514 )
 texture = ExtResource( 87 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
-[sub_resource type="StyleBoxTexture" id=32]
+[sub_resource type="StyleBoxTexture" id=12]
 texture = ExtResource( 87 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
@@ -150,42 +166,59 @@ region_rect = Rect2( 0, 0, 177, 514 )
 texture = ExtResource( 87 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
-[sub_resource type="StyleBoxTexture" id=33]
-texture = ExtResource( 86 )
+[sub_resource type="StyleBoxTexture" id=44]
+texture = ExtResource( 87 )
+region_rect = Rect2( 0, 0, 177, 514 )
+
+[sub_resource type="StyleBoxTexture" id=14]
+texture = ExtResource( 87 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
 [sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 87 )
+region_rect = Rect2( 0, 0, 177, 514 )
+
+[sub_resource type="StyleBoxTexture" id=16]
+texture = ExtResource( 87 )
+region_rect = Rect2( 0, 0, 177, 514 )
+
+[sub_resource type="StyleBoxTexture" id=45]
+texture = ExtResource( 87 )
+region_rect = Rect2( 0, 0, 177, 514 )
+
+[sub_resource type="StyleBoxTexture" id=17]
+texture = ExtResource( 87 )
+region_rect = Rect2( 0, 0, 177, 514 )
+
+[sub_resource type="StyleBoxTexture" id=18]
+texture = ExtResource( 87 )
+region_rect = Rect2( 0, 0, 177, 514 )
+
+[sub_resource type="StyleBoxTexture" id=19]
+texture = ExtResource( 87 )
+region_rect = Rect2( 0, 0, 177, 514 )
+
+[sub_resource type="StyleBoxTexture" id=40]
 texture = ExtResource( 86 )
 region_rect = Rect2( 0, 0, 177, 514 )
 
-[sub_resource type="StyleBoxTexture" id=34]
-texture = ExtResource( 13 )
-region_rect = Rect2( 0, 0, 96, 296 )
-
-[sub_resource type="StyleBoxTexture" id=17]
-texture = ExtResource( 13 )
-region_rect = Rect2( 0, 0, 96, 296 )
-
-[sub_resource type="DynamicFont" id=18]
-font_data = ExtResource( 85 )
-
-[sub_resource type="StyleBoxTexture" id=35]
-texture = ExtResource( 13 )
-region_rect = Rect2( 0, 0, 96, 296 )
-
 [sub_resource type="StyleBoxTexture" id=20]
-texture = ExtResource( 13 )
-region_rect = Rect2( 0, 0, 96, 296 )
+texture = ExtResource( 86 )
+region_rect = Rect2( 0, 0, 177, 514 )
 
 [sub_resource type="StyleBoxTexture" id=21]
-texture = ExtResource( 13 )
-region_rect = Rect2( 0, 0, 96, 296 )
+texture = ExtResource( 86 )
+region_rect = Rect2( 0, 0, 177, 514 )
 
 [sub_resource type="StyleBoxTexture" id=22]
+texture = ExtResource( 86 )
+region_rect = Rect2( 0, 0, 177, 514 )
+
+[sub_resource type="StyleBoxTexture" id=46]
 texture = ExtResource( 13 )
 region_rect = Rect2( 0, 0, 96, 296 )
 
-[sub_resource type="StyleBoxTexture" id=36]
+[sub_resource type="StyleBoxTexture" id=23]
 texture = ExtResource( 13 )
 region_rect = Rect2( 0, 0, 96, 296 )
 
@@ -193,11 +226,74 @@ region_rect = Rect2( 0, 0, 96, 296 )
 texture = ExtResource( 13 )
 region_rect = Rect2( 0, 0, 96, 296 )
 
+[sub_resource type="StyleBoxTexture" id=25]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="DynamicFont" id=26]
+font_data = ExtResource( 85 )
+
+[sub_resource type="StyleBoxTexture" id=47]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=27]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=28]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=29]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=48]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=30]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=31]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=32]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=49]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=33]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=34]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=35]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=50]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
+[sub_resource type="StyleBoxTexture" id=36]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 96, 296 )
+
 [sub_resource type="StyleBoxTexture" id=37]
 texture = ExtResource( 13 )
 region_rect = Rect2( 0, 0, 96, 296 )
 
-[sub_resource type="StyleBoxTexture" id=26]
+[sub_resource type="StyleBoxTexture" id=38]
 texture = ExtResource( 13 )
 region_rect = Rect2( 0, 0, 96, 296 )
 
@@ -207,7 +303,7 @@ anchor_bottom = 1.0
 margin_left = -6.1615
 margin_top = 29.7293
 margin_right = -6.1615
-margin_bottom = 29.7292
+margin_bottom = -20.2708
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -218,11 +314,12 @@ margin_left = 25.0
 margin_top = 721.854
 margin_right = 135.0
 margin_bottom = 1018.05
-custom_styles/focus = SubResource( 27 )
-custom_styles/normal = SubResource( 2 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 39 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "C"
 script = ExtResource( 1 )
 __meta__ = {
@@ -275,9 +372,11 @@ margin_left = 120.0
 margin_top = 723.158
 margin_right = 230.0
 margin_bottom = 1018.15
-custom_styles/focus = SubResource( 28 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 41 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "D"
@@ -328,9 +427,11 @@ margin_left = 215.0
 margin_top = 721.854
 margin_right = 325.0
 margin_bottom = 1016.85
-custom_styles/focus = SubResource( 29 )
-custom_styles/normal = SubResource( 7 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 42 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "E"
@@ -388,9 +489,11 @@ margin_left = 310.0
 margin_top = 721.854
 margin_right = 420.0
 margin_bottom = 1016.85
-custom_styles/focus = SubResource( 30 )
-custom_styles/normal = SubResource( 9 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "F"
@@ -441,9 +544,11 @@ margin_left = 405.0
 margin_top = 723.158
 margin_right = 515.0
 margin_bottom = 1018.15
-custom_styles/focus = SubResource( 31 )
-custom_styles/normal = SubResource( 11 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 44 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "G"
@@ -494,9 +599,11 @@ margin_left = 500.0
 margin_top = 723.158
 margin_right = 610.0
 margin_bottom = 1018.15
-custom_styles/focus = SubResource( 32 )
-custom_styles/normal = SubResource( 13 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 45 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/focus = SubResource( 18 )
+custom_styles/normal = SubResource( 19 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "A"
@@ -552,9 +659,11 @@ margin_left = 595.0
 margin_top = 723.158
 margin_right = 705.0
 margin_bottom = 1018.15
-custom_styles/focus = SubResource( 33 )
-custom_styles/normal = SubResource( 15 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 40 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/normal = SubResource( 22 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 text = "B"
@@ -610,9 +719,11 @@ margin_left = 97.0
 margin_top = 731.0
 margin_right = 152.0
 margin_bottom = 903.0
-custom_styles/focus = SubResource( 34 )
-custom_styles/normal = SubResource( 17 )
-custom_fonts/font = SubResource( 18 )
+custom_styles/hover = SubResource( 46 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/focus = SubResource( 24 )
+custom_styles/normal = SubResource( 25 )
+custom_fonts/font = SubResource( 26 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
@@ -668,9 +779,11 @@ margin_left = 195.0
 margin_top = 730.0
 margin_right = 250.0
 margin_bottom = 902.0
-custom_styles/focus = SubResource( 35 )
-custom_styles/normal = SubResource( 20 )
-custom_fonts/font = SubResource( 18 )
+custom_styles/hover = SubResource( 47 )
+custom_styles/pressed = SubResource( 27 )
+custom_styles/focus = SubResource( 28 )
+custom_styles/normal = SubResource( 29 )
+custom_fonts/font = SubResource( 26 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
@@ -721,9 +834,11 @@ margin_left = 383.0
 margin_top = 730.0
 margin_right = 438.0
 margin_bottom = 902.0
-custom_styles/focus = SubResource( 21 )
-custom_styles/normal = SubResource( 22 )
-custom_fonts/font = SubResource( 18 )
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 30 )
+custom_styles/focus = SubResource( 31 )
+custom_styles/normal = SubResource( 32 )
+custom_fonts/font = SubResource( 26 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
@@ -774,9 +889,11 @@ margin_left = 479.0
 margin_top = 730.0
 margin_right = 534.0
 margin_bottom = 902.0
-custom_styles/focus = SubResource( 36 )
-custom_styles/normal = SubResource( 24 )
-custom_fonts/font = SubResource( 18 )
+custom_styles/hover = SubResource( 49 )
+custom_styles/pressed = SubResource( 33 )
+custom_styles/focus = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+custom_fonts/font = SubResource( 26 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
@@ -834,9 +951,11 @@ margin_left = 573.0
 margin_top = 730.0
 margin_right = 628.0
 margin_bottom = 902.0
+custom_styles/hover = SubResource( 50 )
+custom_styles/pressed = SubResource( 36 )
 custom_styles/focus = SubResource( 37 )
-custom_styles/normal = SubResource( 26 )
-custom_fonts/font = SubResource( 18 )
+custom_styles/normal = SubResource( 38 )
+custom_fonts/font = SubResource( 26 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
@@ -895,6 +1014,8 @@ stream = ExtResource( 62 )
 volume_db = 24.0
 attenuation = 0.143587
 
+[node name="Effet" type="Tween" parent="."]
+
 [connection signal="button_down" from="C" to="." method="_on_C_button_down"]
 [connection signal="button_down" from="D" to="." method="_on_D_button_down"]
 [connection signal="button_down" from="E" to="." method="_on_E_button_down"]
@@ -902,7 +1023,7 @@ attenuation = 0.143587
 [connection signal="button_down" from="G" to="." method="_on_G_button_down"]
 [connection signal="button_down" from="A" to="." method="_on_A_button_down"]
 [connection signal="button_down" from="B" to="." method="_on_B_button_down"]
-[connection signal="button_down" from="Db" to="." method="_on_Eb_button_down"]
+[connection signal="button_down" from="Db" to="." method="_on_Db_button_down"]
 [connection signal="button_down" from="Eb" to="." method="_on_Eb_button_down"]
 [connection signal="button_down" from="Gb" to="." method="_on_Gb_button_down"]
 [connection signal="button_down" from="Ab" to="." method="_on_Ab_button_down"]

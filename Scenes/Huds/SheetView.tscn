@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Sprites/Design/gameplay/_0018_box.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Piano/SheetView.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/note.PNG" type="Texture" id=3]
+[ext_resource path="res://Sprites/Design/gameplay/_0015_Vector-Smart-Object-copy-2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Design/gameplay/gameplay.jpg" type="Texture" id=4]
 [ext_resource path="res://Sprites/Design/gameplay/_0017_Layer-73.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Design/gameplay/_0016_Rectangle-3-copy-3.png" type="Texture" id=6]
@@ -38,59 +38,61 @@ position = Vector2( -516.788, -0.174438 )
 texture = ExtResource( 7 )
 
 [node name="Highlight" type="Sprite" parent="."]
-position = Vector2( 761.485, 577.712 )
-scale = Vector2( 0.067178, 0.067178 )
+position = Vector2( 728.135, 487.079 )
+scale = Vector2( 0.0680185, 0.0680185 )
 texture = ExtResource( 3 )
 
 [node name="posA3" type="Position2D" parent="."]
-position = Vector2( 691.104, 530.931 )
+position = Vector2( 664.104, 530.931 )
 
 [node name="posB3" type="Position2D" parent="."]
-position = Vector2( 691.05, 518.985 )
+position = Vector2( 664.05, 518.985 )
 
 [node name="posC4" type="Position2D" parent="."]
-position = Vector2( 690.786, 505.859 )
+position = Vector2( 663.786, 505.859 )
 
 [node name="posD4" type="Position2D" parent="."]
-position = Vector2( 690.766, 490.553 )
+position = Vector2( 663.766, 490.553 )
 
 [node name="posE4" type="Position2D" parent="."]
-position = Vector2( 690.979, 482.695 )
+position = Vector2( 663.979, 482.695 )
 
 [node name="posF4" type="Position2D" parent="."]
-position = Vector2( 690.693, 471.081 )
+position = Vector2( 663.693, 471.081 )
 
 [node name="posG4" type="Position2D" parent="."]
-position = Vector2( 690.693, 459.351 )
+position = Vector2( 663.693, 459.351 )
 
 [node name="posA4" type="Position2D" parent="."]
-position = Vector2( 690.577, 446.292 )
+position = Vector2( 663.577, 446.292 )
 
 [node name="posB4" type="Position2D" parent="."]
-position = Vector2( 690.952, 429.313 )
+position = Vector2( 663.952, 429.313 )
 
 [node name="posC5" type="Position2D" parent="."]
-position = Vector2( 690.952, 414.209 )
+position = Vector2( 663.952, 414.209 )
 
 [node name="posD5" type="Position2D" parent="."]
-position = Vector2( 690.952, 400.353 )
+position = Vector2( 663.952, 400.353 )
 
 [node name="posE5" type="Position2D" parent="."]
-position = Vector2( 690.952, 389.999 )
+position = Vector2( 663.952, 389.999 )
 
 [node name="posF5" type="Position2D" parent="."]
-position = Vector2( 691.313, 378.77 )
+position = Vector2( 664.313, 378.77 )
 
 [node name="posG5" type="Position2D" parent="."]
-position = Vector2( 691.635, 371.876 )
+position = Vector2( 664.635, 371.876 )
 
 [node name="posA5" type="Position2D" parent="."]
-position = Vector2( 691.514, 359.427 )
+position = Vector2( 664.514, 359.427 )
 
 [node name="posB5" type="Position2D" parent="."]
-position = Vector2( 691.514, 345.269 )
+position = Vector2( 664.514, 345.269 )
 
 [node name="gameplay" type="Sprite" parent="."]
 position = Vector2( 1109.64, 637.223 )
 scale = Vector2( 0.580283, 0.580283 )
 texture = ExtResource( 4 )
+
+[node name="Effet" type="Tween" parent="."]

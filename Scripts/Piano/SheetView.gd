@@ -96,7 +96,8 @@ func _display_note(note: Note):
 
 
 func _on_Piano_piano_key_pressed(note, btn):
-	
+	$Effet.interpolate_property(btn, 'rect_scale', btn.get_scale(), Vector2(1,0.98), 0.3, Tween.TRANS_QUAD, Tween.EASE_OUT)
+	$Effet.start()	
 #	if last_key_pressed:
 #		last_key_pressed.get_stylebox("normal").bg_color = last_key_pressed.btn_color
 #		last_key_pressed.get_stylebox("focus").bg_color = last_key_pressed.btn_color
