@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://fonts/Bubblegum.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/SceneManager/ConfigMenu.gd" type="Script" id=2]
@@ -54,15 +54,15 @@ CheckBox/styles/hover_pressed = null
 CheckBox/styles/normal = null
 CheckBox/styles/pressed = null
 
-[sub_resource type="StyleBoxFlat" id=15]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.0627451, 0.0666667, 0.2, 1 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=7]
 size = 30
 font_data = ExtResource( 3 )
 
-[sub_resource type="Theme" id=9]
-default_font = SubResource( 8 )
+[sub_resource type="Theme" id=8]
+default_font = SubResource( 7 )
 OptionButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
 OptionButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 OptionButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
@@ -92,11 +92,15 @@ PopupMenu/icons/unchecked = null
 PopupMenu/styles/hover = null
 PopupMenu/styles/labeled_separator_left = null
 PopupMenu/styles/labeled_separator_right = null
-PopupMenu/styles/panel = SubResource( 15 )
+PopupMenu/styles/panel = SubResource( 6 )
 PopupMenu/styles/panel_disabled = null
 PopupMenu/styles/separator = null
 
-[sub_resource type="StyleBoxTexture" id=16]
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 297, 116 )
+
+[sub_resource type="StyleBoxTexture" id=10]
 texture = ExtResource( 13 )
 region_rect = Rect2( 0, 0, 297, 116 )
 
@@ -104,7 +108,7 @@ region_rect = Rect2( 0, 0, 297, 116 )
 texture = ExtResource( 13 )
 region_rect = Rect2( 0, 0, 297, 116 )
 
-[sub_resource type="StyleBoxTexture" id=14]
+[sub_resource type="StyleBoxTexture" id=12]
 texture = ExtResource( 13 )
 region_rect = Rect2( 0, 0, 297, 116 )
 
@@ -112,12 +116,13 @@ region_rect = Rect2( 0, 0, 297, 116 )
 texture = ExtResource( 13 )
 region_rect = Rect2( 0, 0, 297, 116 )
 
-[sub_resource type="StyleBoxTexture" id=12]
-texture = ExtResource( 13 )
-region_rect = Rect2( 0, 0, 297, 116 )
-
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=14]
 size = 25
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 30
+outline_color = Color( 0.0784314, 0.74902, 0.956863, 1 )
 font_data = ExtResource( 3 )
 
 [node name="ConfigScene" type="Node2D"]
@@ -157,9 +162,9 @@ __meta__ = {
 
 [node name="LabelSpeed" type="Label" parent="HUD/Panel"]
 margin_left = 67.9901
-margin_top = 96.217
+margin_top = 197.217
 margin_right = 148.99
-margin_bottom = 129.217
+margin_bottom = 230.217
 custom_fonts/font = SubResource( 2 )
 text = "Speed"
 __meta__ = {
@@ -168,9 +173,9 @@ __meta__ = {
 
 [node name="btnSpeedMinus" type="Button" parent="HUD/Panel"]
 margin_left = 163.227
-margin_top = 90.0
+margin_top = 191.0
 margin_right = 240.227
-margin_bottom = 131.0
+margin_bottom = 232.0
 custom_fonts/font = SubResource( 3 )
 text = "-"
 __meta__ = {
@@ -179,9 +184,9 @@ __meta__ = {
 
 [node name="btnSpeedAdd" type="Button" parent="HUD/Panel"]
 margin_left = 264.675
-margin_top = 90.0
+margin_top = 191.0
 margin_right = 341.675
-margin_bottom = 131.0
+margin_bottom = 232.0
 custom_fonts/font = SubResource( 3 )
 text = "+"
 __meta__ = {
@@ -209,6 +214,7 @@ __meta__ = {
 }
 
 [node name="TextureSpeed" type="TextureRect" parent="HUD/bg"]
+visible = false
 margin_left = 118.231
 margin_top = 468.742
 margin_right = 222.231
@@ -217,6 +223,7 @@ texture = ExtResource( 9 )
 expand = true
 
 [node name="TextureAutoSlow" type="TextureRect" parent="HUD/bg"]
+visible = false
 margin_left = 118.0
 margin_top = 571.0
 margin_right = 308.0
@@ -225,6 +232,7 @@ texture = ExtResource( 10 )
 expand = true
 
 [node name="Texturebackground" type="TextureRect" parent="HUD/bg"]
+visible = false
 margin_left = 120.0
 margin_top = 673.0
 margin_right = 330.0
@@ -233,6 +241,7 @@ texture = ExtResource( 11 )
 expand = true
 
 [node name="CheckBox" type="CheckBox" parent="HUD/bg"]
+visible = false
 margin_left = 428.945
 margin_top = 543.568
 margin_right = 567.945
@@ -269,17 +278,18 @@ __meta__ = {
 }
 
 [node name="OptionButton" type="OptionButton" parent="HUD/bg"]
+visible = false
 margin_left = 336.0
 margin_top = 653.0
 margin_right = 805.0
 margin_bottom = 774.0
 rect_scale = Vector2( 0.519998, 0.519998 )
-theme = SubResource( 9 )
-custom_styles/hover = SubResource( 16 )
-custom_styles/pressed = SubResource( 11 )
-custom_styles/focus = SubResource( 14 )
-custom_styles/disabled = SubResource( 13 )
-custom_styles/normal = SubResource( 12 )
+theme = SubResource( 8 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
 text = "BG1"
 align = 1
 items = [ "BG1", null, false, 0, null, "BG2", null, false, 1, null, "BG3", null, false, 2, null ]
@@ -319,9 +329,9 @@ margin_bottom = 63.0
 
 [node name="pnaleSpeed" type="TextureRect" parent="HUD/bg"]
 margin_left = 369.0
-margin_top = 445.0
+margin_top = 546.0
 margin_right = 533.0
-margin_bottom = 509.0
+margin_bottom = 610.0
 texture = ExtResource( 13 )
 expand = true
 __meta__ = {
@@ -377,8 +387,20 @@ margin_left = 53.6913
 margin_top = 13.0692
 margin_right = 140.691
 margin_bottom = 44.0692
-custom_fonts/font = SubResource( 10 )
-text = "50k/m"
+custom_fonts/font = SubResource( 14 )
+text = "50bpm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HUD/bg"]
+margin_left = 119.481
+margin_top = 563.064
+margin_right = 222.481
+margin_bottom = 599.064
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 0.0784314, 0.74902, 0.956863, 1 )
+text = "TEMPO"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://fonts/Bubblegum.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/SceneManager/GameScene.gd" type="Script" id=2]
@@ -13,14 +13,8 @@
 [ext_resource path="res://Sprites/Design/gameplay/_0003_Polygon-1.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Design/gameplay/_0001_Layer-64.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Design/gameplay/_0002_Layer-65.png" type="Texture" id=13]
-
-[sub_resource type="StyleBoxTexture" id=5]
-texture = ExtResource( 8 )
-region_rect = Rect2( 0, 0, 99, 87 )
-
-[sub_resource type="StyleBoxTexture" id=4]
-texture = ExtResource( 8 )
-region_rect = Rect2( 0, 0, 99, 87 )
+[ext_resource path="res://Scripts/Hud/HUDLeft.gd" type="Script" id=14]
+[ext_resource path="res://fonts/Roboto-Black.ttf" type="DynamicFontData" id=15]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 8 )
@@ -30,9 +24,23 @@ region_rect = Rect2( 0, 0, 99, 87 )
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 99, 87 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 99, 87 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 99, 87 )
+
+[sub_resource type="DynamicFont" id=5]
 size = 30
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 15 )
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource( 2 )
@@ -53,6 +61,7 @@ __meta__ = {
 [node name="HUD" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -72,33 +81,71 @@ margin_left = 645.0
 margin_top = 86.0
 margin_right = 704.0
 margin_bottom = 137.0
-custom_styles/hover = SubResource( 5 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect2" type="TextureRect" parent="HUD"]
+[node name="smallProgressBar" type="ColorRect" parent="HUD"]
 margin_left = 87.0
 margin_top = 134.0
 margin_right = 410.0
 margin_bottom = 154.0
-texture = ExtResource( 9 )
-expand = true
+color = Color( 0.196078, 0.309804, 0.396078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="TextureRect3" type="TextureRect" parent="HUD"]
+[node name="TextureProgress" type="TextureProgress" parent="HUD/smallProgressBar"]
+margin_left = 11.0
+margin_right = 324.0
+margin_bottom = 20.0
+texture_progress = ExtResource( 9 )
+tint_under = Color( 0.541176, 0.541176, 0.541176, 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HUD/smallProgressBar"]
+margin_left = 142.0
+margin_top = 1.0
+margin_right = 182.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 6 )
+text = "100%"
+
+[node name="bigProgressBar" type="ColorRect" parent="HUD"]
 margin_left = 86.0
 margin_top = 89.0
 margin_right = 567.0
 margin_bottom = 131.0
-texture = ExtResource( 10 )
-expand = true
+color = Color( 0.196078, 0.309804, 0.396078, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureProgress" type="TextureProgress" parent="HUD/bigProgressBar"]
+margin_left = 37.0
+margin_right = 481.0
+margin_bottom = 42.0
+texture_progress = ExtResource( 10 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HUD/bigProgressBar"]
+margin_left = 245.0
+margin_top = 14.0
+margin_right = 285.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 7 )
+text = "0%"
 
 [node name="TextureRect4" type="TextureRect" parent="HUD"]
 margin_left = 10.715
@@ -139,6 +186,7 @@ margin_bottom = 344.478
 [node name="Effet" type="Tween" parent="."]
 
 [connection signal="piano_key_pressed" from="Piano" to="Sheet" method="_on_Piano_piano_key_pressed"]
+[connection signal="after_piano_key_pressed_evaluated" from="Sheet" to="HUD" method="_on_Sheet_after_piano_key_pressed_evaluated"]
 [connection signal="note_displayed" from="Sheet" to="Piano" method="_on_Sheet_note_displayed"]
 [connection signal="button_down" from="HUD/btnConfig" to="." method="_on_btnConfig_button_down"]
 [connection signal="pressed" from="HUD/btnConfig" to="." method="_on_btnConfig_pressed"]

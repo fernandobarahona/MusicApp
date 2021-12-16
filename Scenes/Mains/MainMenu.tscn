@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://fonts/Bubblegum.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/SceneManager/MainMenu.gd" type="Script" id=2]
@@ -7,16 +7,20 @@
 [ext_resource path="res://Sprites/Design/main menu/_0012_Rectangle-1.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Design/main menu/_0011_Vector-Smart-Object.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Design/main menu/_0010_GAME.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Design/main menu/_0009_Practice.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Design/main menu/_0009_Practice_transparent.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Design/main menu/_0004_Vector-Smart-Object.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Design/main menu/_0007_Vector-Smart-Object.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Design/main menu/_0008_About-.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Design/main menu/_0008_About-transparent.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Design/main menu/_0005_Config.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Design/main menu/_0006_settings-gear.png" type="Texture" id=13]
 [ext_resource path="res://Sprites/Design/main menu/_0003_Rectangle-1-copy.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Design/main menu/_0002_LOGIN.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Design/main menu/_0002_LOGIN_transparent.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Design/main menu/_0001_Layer-79.png" type="Texture" id=16]
 [ext_resource path="res://Sprites/Design/main menu/_0000_text.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Design/main menu/_0003_Rectangle-1-transparent.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Design/main menu/_0012_Rectangle-1_transparent.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Design/main menu/_0004_Vector-Smart-Object_transparent.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Design/main menu/_0007_Vector-Smart-Object_transparent.png" type="Texture" id=21]
 
 [sub_resource type="DynamicFont" id=1]
 size = 34
@@ -137,7 +141,7 @@ margin_left = -110.295
 margin_top = -118.084
 margin_right = 103.705
 margin_bottom = 96.916
-texture = ExtResource( 5 )
+texture = ExtResource( 19 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -159,7 +163,9 @@ margin_left = 33.0
 margin_top = 38.0
 margin_right = 180.0
 margin_bottom = 165.0
+disabled = true
 texture_normal = ExtResource( 9 )
+texture_disabled = ExtResource( 20 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -171,6 +177,7 @@ margin_left = 3.0
 margin_right = 211.0
 margin_bottom = 209.0
 custom_fonts/font = SubResource( 1 )
+disabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -183,7 +190,7 @@ margin_left = -108.143
 margin_top = -127.921
 margin_right = 105.857
 margin_bottom = 87.079
-texture = ExtResource( 5 )
+texture = ExtResource( 19 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -205,7 +212,9 @@ margin_left = 39.5
 margin_top = 25.0
 margin_right = 176.5
 margin_bottom = 178.0
+disabled = true
 texture_normal = ExtResource( 10 )
+texture_disabled = ExtResource( 21 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -218,6 +227,7 @@ margin_top = 1.0
 margin_right = 210.0
 margin_bottom = 208.0
 custom_fonts/font = SubResource( 1 )
+disabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -285,7 +295,9 @@ margin_left = -160.898
 margin_top = -36.4696
 margin_right = 280.102
 margin_bottom = 68.5304
+disabled = true
 texture_normal = ExtResource( 14 )
+texture_disabled = ExtResource( 18 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -294,10 +306,11 @@ __meta__ = {
 [node name="btnLogin" type="Button" parent="HUD/Bg/btnLogin"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = -153.0
-margin_top = -30.0
+margin_top = -33.6818
 margin_right = 273.0
-margin_bottom = 61.0
+margin_bottom = 57.3182
 custom_fonts/font = SubResource( 1 )
+disabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

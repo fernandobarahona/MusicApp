@@ -38,6 +38,7 @@ func _on_btnCredit_pressed():
 func _on_btnPractice_pressed():
 	$Effet.interpolate_property($HUD/Bg/btnPractice, 'scale', $HUD/Bg/btnPractice.get_scale(), Vector2(1,1), btn_anim_time, Tween.TRANS_QUAD, Tween.EASE_OUT)
 	$Effet.start()
+# warning-ignore:return_value_discarded
 	OS.shell_open("https://leandrodreamer.itch.io/partitura")
 
 
