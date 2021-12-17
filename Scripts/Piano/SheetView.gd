@@ -68,7 +68,7 @@ func _display_note(note: Note):
 	occupied_note.append(highlight)
 	actual_displayed_note.append(note)
 	highlight.visible = true
-	highlight.get_node("Highlight")._display(note_offset)
+	highlight.get_node("Highlight")._display(note_offset, note.flated)
 	last_displayed_index += 1
 	#highlight._resetColor()
 #	if note.octave == GameManager.Octave.oct_3:
@@ -134,7 +134,7 @@ func _on_Piano_piano_key_pressed(note, btn):
 	
 	last_key_pressed = btn
 	nb_session_keypiano_pressed +=1
-	if actual_displayed_note[current_displayed_index].note == note.note and actual_displayed_note[current_displayed_index].octave == note.octave:
+	if actual_displayed_note[current_displayed_index].note == note.note and actual_displayed_note[current_displayed_index].octave == note.octave and actual_displayed_note[current_displayed_index].flated == occupied_note[4-nb_keypiano_pressed].get_node("Highlight").flated:
 		occupied_note[4-nb_keypiano_pressed].get_node("Highlight")._changeColor(true)
 		nb_session_keypiano_pressed_corrected += 1
 	else:
@@ -178,32 +178,32 @@ func _get_free_note(note):
 	
 	if note.note == GameManager.Notes.C:
 		print("free note c")
-		highlight = $Sprite/partition/C4._get_free_note()
+		highlight = $SheetBg/partition/C4._get_free_note()
 
 	if note.note == GameManager.Notes.D:
 		print("free note d")
-		highlight = $Sprite/partition/D4._get_free_note()
+		highlight = $SheetBg/partition/D4._get_free_note()
 
 	if note.note == GameManager.Notes.E:
 		print("free note e")
-		highlight = $Sprite/partition/E4._get_free_note()
+		highlight = $SheetBg/partition/E4._get_free_note()
 
 	if note.note == GameManager.Notes.F:
 		print("free note f")
-		highlight = $Sprite/partition/F4._get_free_note()
+		highlight = $SheetBg/partition/F4._get_free_note()
 			
 	if note.note == GameManager.Notes.G:
 		print("free note g")
-		highlight = $Sprite/partition/G4._get_free_note()
+		highlight = $SheetBg/partition/G4._get_free_note()
 
 	if note.note == GameManager.Notes.A:
 		print("free note a")
-		highlight = $Sprite/partition/A4._get_free_note()
+		highlight = $SheetBg/partition/A4._get_free_note()
 			
 	if note.note == GameManager.Notes.B:
 		print("free note b")
-		highlight = $Sprite/partition/B4._get_free_note()
-		
+		highlight = $SheetBg/partition/B4._get_free_note()
+	
 	return highlight
 #	if $Highlight1.free:
 #		$Highlight1.free = false

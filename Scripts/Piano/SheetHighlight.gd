@@ -7,8 +7,14 @@ export(Texture) var greenTexture
 
 export(Texture) var normalTexture
 
-var free:bool = true
+export(Texture) var flatRedTexture
 
+export(Texture) var flatGreenTexture
+
+export(Texture) var flatNormalTexture
+
+var free:bool = true
+var flated:bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,14 +26,26 @@ func _ready():
 #	pass
 
 
-func _display(offset:float):
+func _display(offset:float, flated_note:bool):
 	get_parent().offset = offset
+	flated = flated_note
+	if flated:
+		texture = flatNormalTexture
+	else:
+		texture = normalTexture
 
 func _changeColor(rigth:bool):
 	if rigth:
-		texture = greenTexture
+		if flated:
+			texture = flatGreenTexture
+		else:
+			texture = greenTexture
 	else:
-		texture = redTexture
+		if flated:
+			texture = flatRedTexture
+		else:
+			texture = redTexture
 
 func _resetColor():
 	texture = normalTexture
+	flated = false

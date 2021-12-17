@@ -107,7 +107,7 @@ func _on_B_button_down():
 
 
 func _on_Db_button_down():
-	emit_signal("piano_key_pressed", Note.new(GameManager.Notes.Db,octave), $Db)
+	emit_signal("piano_key_pressed", Note.new(GameManager.Notes.D,octave, true), $Db)
 	match octave:
 		GameManager.Octave.oct_0: $Db/Player0.play()
 		GameManager.Octave.oct_1: $Db/Player1.play()
@@ -120,7 +120,7 @@ func _on_Db_button_down():
 
 
 func _on_Eb_button_down():
-	emit_signal("piano_key_pressed", Note.new(GameManager.Notes.Eb,octave), $Eb)
+	emit_signal("piano_key_pressed", Note.new(GameManager.Notes.E,octave, true), $Eb)
 	match octave:
 		GameManager.Octave.oct_1: $Eb/Player1.play()
 		GameManager.Octave.oct_2: $Eb/Player2.play()
@@ -132,7 +132,7 @@ func _on_Eb_button_down():
 
 
 func _on_Gb_button_down():
-	emit_signal("piano_key_pressed", Note.new(GameManager.Notes.Gb,octave), $Gb)
+	emit_signal("piano_key_pressed", Note.new(GameManager.Notes.G,octave, true), $Gb)
 	match octave:
 		GameManager.Octave.oct_1: $Gb/Player1.play()
 		GameManager.Octave.oct_2: $Gb/Player2.play()
@@ -144,7 +144,7 @@ func _on_Gb_button_down():
 
 
 func _on_Ab_button_down():
-	emit_signal("piano_key_pressed", Note.new(GameManager.Notes.Ab,octave), $Ab)
+	emit_signal("piano_key_pressed", Note.new(GameManager.Notes.A,octave, true), $Ab)
 	match octave:
 		GameManager.Octave.oct_1: $Ab/Player1.play()
 		GameManager.Octave.oct_2: $Ab/Player2.play()
@@ -156,7 +156,7 @@ func _on_Ab_button_down():
 
 
 func _on_Bb_button_down():
-	emit_signal("piano_key_pressed", Note.new(GameManager.Notes.Bb,octave), $Bb)
+	emit_signal("piano_key_pressed", Note.new(GameManager.Notes.B,octave, true), $Bb)
 	match octave:
 		GameManager.Octave.oct_0: $Bb/Player0.play()
 		GameManager.Octave.oct_1: $Bb/Player1.play()

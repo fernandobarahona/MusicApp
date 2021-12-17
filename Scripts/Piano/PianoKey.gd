@@ -3,6 +3,8 @@ extends Button
 
 export(GameManager.Notes) var key_note
 
+export(bool) var flated
+
 
 export(Color) var btn_color
 

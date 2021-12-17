@@ -95,7 +95,7 @@ margin_left = 87.0
 margin_top = 134.0
 margin_right = 410.0
 margin_bottom = 154.0
-color = Color( 0.196078, 0.309804, 0.396078, 1 )
+color = Color( 0.0627451, 0.0666667, 0.2, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -118,13 +118,16 @@ margin_right = 182.0
 margin_bottom = 20.0
 custom_fonts/font = SubResource( 6 )
 text = "100%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="bigProgressBar" type="ColorRect" parent="HUD"]
 margin_left = 86.0
 margin_top = 89.0
 margin_right = 567.0
 margin_bottom = 131.0
-color = Color( 0.196078, 0.309804, 0.396078, 1 )
+color = Color( 0.0627451, 0.0666667, 0.2, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
