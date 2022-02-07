@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Piano/SheetHighlight.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Design/gameplay/_0015_Vector-Smart-Object-copy-2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Design/gameplay/flat_green.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Design/gameplay/_0015_Vector-Smart-Object-copy-2_red.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Design/gameplay/_0015_Vector-Smart-Object-copy-2_green.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Design/gameplay/flat.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Design/gameplay/flat_red.png" type="Texture" id=7]
+
+[node name="Staff_note" type="PathFollow2D"]
+position = Vector2( -393.195, 139.196 )
+rotation = -0.0757008
+offset = 10000.0
+rotate = false
+loop = false
+
+[node name="Highlight" type="Sprite" parent="."]
+position = Vector2( -0.0472412, 0.118652 )
+rotation = 0.0769577
+scale = Vector2( 0.265, 0.265 )
+texture = ExtResource( 2 )
+offset = Vector2( -10.7317, -0.613182 )
+script = ExtResource( 1 )
+redTexture = ExtResource( 4 )
+greenTexture = ExtResource( 5 )
+normalTexture = ExtResource( 2 )
+flatRedTexture = ExtResource( 7 )
+flatGreenTexture = ExtResource( 3 )
+flatNormalTexture = ExtResource( 6 )

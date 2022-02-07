@@ -71,12 +71,15 @@ __meta__ = {
 }
 
 [node name="logo" type="TextureRect" parent="HUD/Bg"]
-margin_left = 268.0
+margin_left = 240.0
 margin_top = 90.0
-margin_right = 480.0
+margin_right = 452.0
 margin_bottom = 320.0
 texture = ExtResource( 16 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureRect" type="TextureRect" parent="HUD/Bg"]
 margin_left = 131.214
@@ -316,7 +319,6 @@ __meta__ = {
 }
 
 [node name="Effet" type="Tween" parent="."]
-
 [connection signal="button_down" from="HUD/Bg/btnGame/btnGame/btnGame" to="." method="_on_btnGame_button_down"]
 [connection signal="pressed" from="HUD/Bg/btnGame/btnGame/btnGame" to="." method="_on_btnGame_pressed"]
 [connection signal="button_down" from="HUD/Bg/btnPractice/btnPractice/btnPractice" to="." method="_on_btnPractice_button_down"]

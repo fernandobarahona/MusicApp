@@ -1,5 +1,7 @@
 extends Control
 
+const note_ressource = preload("res://Scenes/Objects/Staff_note.tscn")
+
 signal note_displayed(note)
 signal after_piano_key_pressed_evaluated(nb_try, nb_try_correct, corrected)
 
@@ -11,8 +13,6 @@ var nb_notes_togenerated = 20
 
 var counter = 2
 
-var current_displayed_index = 0
-
 var last_displayed_index = 0
 
 var last_key_pressed
@@ -21,35 +21,47 @@ var free_note
 
 var highlight
 
-var nb_keypiano_pressed = 4
-
-var note_offset = 50
-
-var occupied_note:Array
+#var note_offset = 50
 
 var actual_displayed_note:Array
+
+var occupied_note:Array
 
 #since his start to play this session
 var nb_session_keypiano_pressed
 
 var nb_session_keypiano_pressed_corrected
 
+var spawn_delay = 2
+
+var timer_spawn_delay = 2
+
+var total_note_generated = 0
+
+var current_note_compared = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	current_note_compared = 0
 	nb_session_keypiano_pressed = 0
 	nb_session_keypiano_pressed_corrected = 0
 #	var p = Note.new(GameManager.Notes.E, GameManager.Octave.oct_5)
 #	_display_note(p)
+	timer_spawn_delay = spawn_delay
 	var ng = NotesGenerator.new()
 	generated_notes = ng._generetate_notes(nb_notes_togenerated)
-	for i in range(4):
-		_display_note(generated_notes[last_displayed_index])
-		note_offset += 150
+#	for i in range(4):
+#		_display_note(generated_notes[last_displayed_index])
+		#note_offset += 150
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+	timer_spawn_delay -= delta
+	if timer_spawn_delay <= 0:
+		_display_note(generated_notes[last_displayed_index])
+		timer_spawn_delay = spawn_delay
+		
 #	if generated_notes.size() > current_displayed_index:
 #
 #		counter -= delta
@@ -59,70 +71,23 @@ func _process(delta):
 #			counter = 2
 #			if generated_notes.size() > current_displayed_index:
 #				_display_note(generated_notes[current_displayed_index])
-	pass
+	
 
 #this function display visually on the sheet a note
 func _display_note(note: Note):
 	emit_signal("note_displayed", note)
 	highlight = _get_free_note(note)
-	occupied_note.append(highlight)
 	actual_displayed_note.append(note)
+	occupied_note.append(highlight)
 	highlight.visible = true
-	highlight.get_node("Highlight")._display(note_offset, note.flated)
+	highlight.get_node("Highlight")._display(note.flated)
+	highlight.get_node("Highlight").index = total_note_generated
+	total_note_generated += 1
 	last_displayed_index += 1
 	#highlight._resetColor()
-#	if note.octave == GameManager.Octave.oct_3:
-#		if note.note == GameManager.Notes.A:
-#			highlight._display($posA3.position)
-#
-#		if note.note == GameManager.Notes.B:
-#			highlight._display($posB3.position)
-#
-#
-#	if note.octave == GameManager.Octave.oct_4:
-#		if note.note == GameManager.Notes.C:
-#			highlight._display($posC4.position)
-#
-#		if note.note == GameManager.Notes.D:
-#			highlight._display($posD4.position)
-#
-#		if note.note == GameManager.Notes.E:
-#			highlight._display($posE4.position)
-#
-#		if note.note == GameManager.Notes.F:
-#			highlight._display($posF4.position)
-#
-#		if note.note == GameManager.Notes.G:
-#			highlight._display($posG4.position)
-#
-#		if note.note == GameManager.Notes.A:
-#			highlight._display($posA4.position)
-#
-#		if note.note == GameManager.Notes.B:
-#			highlight._display($posB4.position)
-#
-#
-#	if note.octave == GameManager.Octave.oct_5:
-#		if note.note == GameManager.Notes.C:
-#			highlight._display($posC5.position)
-#
-#		if note.note == GameManager.Notes.D:
-#			highlight._display($posD5.position)
-#
-#		if note.note == GameManager.Notes.E:
-#			highlight._display($posE5.position)
-#
-#		if note.note == GameManager.Notes.F:
-#			highlight._display($posF5.position)
-#
-#		if note.note == GameManager.Notes.G:
-#			highlight._display($posG5.position)
-#
-#		if note.note == GameManager.Notes.A:
-#			highlight._display($posA5.position)
-#
-#		if note.note == GameManager.Notes.B:
-#			highlight._display($posB5.position)
+	
+	if last_displayed_index >= generated_notes.size():
+		last_displayed_index = 0
 
 
 func _on_Piano_piano_key_pressed(note, btn):
@@ -132,15 +97,25 @@ func _on_Piano_piano_key_pressed(note, btn):
 #		last_key_pressed.get_stylebox("normal").bg_color = last_key_pressed.btn_color
 #		last_key_pressed.get_stylebox("focus").bg_color = last_key_pressed.btn_color
 	
+	if current_note_compared >= actual_displayed_note.size():
+		return
+	
 	last_key_pressed = btn
 	nb_session_keypiano_pressed +=1
-	if actual_displayed_note[current_displayed_index].note == note.note and actual_displayed_note[current_displayed_index].octave == note.octave and actual_displayed_note[current_displayed_index].flated == occupied_note[4-nb_keypiano_pressed].get_node("Highlight").flated:
-		occupied_note[4-nb_keypiano_pressed].get_node("Highlight")._changeColor(true)
+	
+	print(actual_displayed_note.size())
+	print(current_note_compared)
+	print(actual_displayed_note[current_note_compared].note == note.note)
+	print(actual_displayed_note[current_note_compared].octave == note.octave)
+	print(actual_displayed_note[current_note_compared].flated == occupied_note[current_note_compared].get_node("Highlight").flated)
+	
+	if actual_displayed_note[current_note_compared].note == note.note and actual_displayed_note[current_note_compared].octave == note.octave and actual_displayed_note[current_note_compared].flated == occupied_note[current_note_compared].get_node("Highlight").flated:
+		occupied_note[current_note_compared].get_node("Highlight")._changeColor(true)
 		nb_session_keypiano_pressed_corrected += 1
 	else:
-		occupied_note[4-nb_keypiano_pressed].get_node("Highlight")._changeColor(false)
+		occupied_note[current_note_compared].get_node("Highlight")._changeColor(false)
 	
-	emit_signal("after_piano_key_pressed_evaluated", nb_session_keypiano_pressed, nb_session_keypiano_pressed_corrected, actual_displayed_note[current_displayed_index].note == note.note and actual_displayed_note[current_displayed_index].octave == note.octave)
+	emit_signal("after_piano_key_pressed_evaluated", nb_session_keypiano_pressed, nb_session_keypiano_pressed_corrected, actual_displayed_note[current_note_compared].note == note.note and actual_displayed_note[current_note_compared].octave == note.octave)
 #	if generated_notes[current_displayed_index].note == note.note and generated_notes[current_displayed_index].octave == note.octave:
 #		btn.get_stylebox("normal").bg_color = Color.green
 #		btn.get_stylebox("focus").bg_color = Color.green
@@ -150,28 +125,8 @@ func _on_Piano_piano_key_pressed(note, btn):
 	
 	print("Press note "+str(note.note))
 	print("Press note octave "+str(note.octave))	
-
-		
-	nb_keypiano_pressed -=1
-	current_displayed_index+=1
 	
-	if nb_keypiano_pressed <=0:
-		note_offset = 50
-		nb_keypiano_pressed = 4
-		current_displayed_index = 0
-		actual_displayed_note.clear()
-		for i in range(occupied_note.size()):
-			occupied_note[i].get_node("Highlight").free = true
-			occupied_note[i].get_node("Highlight")._resetColor()
-			occupied_note[i].visible = false
-		occupied_note.clear()
-		for i in range(4):
-			_display_note(generated_notes[last_displayed_index])
-			if last_displayed_index >= generated_notes.size():
-				last_displayed_index = 0
-			note_offset += 150
-	
-	
+	current_note_compared += 1
 
 
 func _get_free_note(note):
@@ -205,22 +160,3 @@ func _get_free_note(note):
 		highlight = $SheetBg/partition/B4._get_free_note()
 	
 	return highlight
-#	if $Highlight1.free:
-#		$Highlight1.free = false
-#		$Highlight2.free = true
-#		return $Highlight1
-#
-#	if $Highlight2.free:
-#		$Highlight2.free = false
-#		$Highlight3.free = true
-#		return $Highlight2
-#
-#	if $Highlight3.free:
-#		$Highlight3.free = false
-#		$Highlight4.free = true
-#		return $Highlight3
-#
-#	if $Highlight4.free:
-#		$Highlight4.free = false
-#		$Highlight1.free = true		
-#		return $Highlight4

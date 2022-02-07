@@ -13,8 +13,11 @@ export(Texture) var flatGreenTexture
 
 export(Texture) var flatNormalTexture
 
-var free:bool = true
+var speed_note = 70
+
 var flated:bool = false
+
+var index:int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,12 +25,17 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if get_parent() is PathFollow2D:
+		get_parent().offset -= speed_note*delta
+	
+		if get_parent().offset <= 0:
+			if index >= 0:
+				get_tree().root.get_node("./GameScene/Sheet").current_note_compared += 1
+			get_parent().queue_free()
+	
 
-
-func _display(offset:float, flated_note:bool):
-	get_parent().offset = offset
+func _display(flated_note:bool):
 	flated = flated_note
 	if flated:
 		texture = flatNormalTexture
