@@ -11,6 +11,7 @@
 [node name="Staff_note" type="PathFollow2D"]
 position = Vector2( -393.195, 139.196 )
 rotation = -0.0757008
+scale = Vector2( 0.7, 0.7 )
 offset = 10000.0
 rotate = false
 loop = false

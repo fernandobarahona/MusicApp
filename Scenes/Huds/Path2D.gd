@@ -33,7 +33,7 @@ func _disabled_notes():
 
 func _get_free_note():
 	highlight_note = get_tree().root.get_node("./GameScene/Sheet").note_ressource.instance()
-	print(highlight_note.name)
+
 	self.add_child(highlight_note)
 	highlights.append(highlight_note)
 	return highlight_note

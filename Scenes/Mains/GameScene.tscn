@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://fonts/Bubblegum.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/SceneManager/GameScene.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Sprites/Design/gameplay/_0002_Layer-65.png" type="Texture" id=13]
 [ext_resource path="res://Scripts/Hud/HUDLeft.gd" type="Script" id=14]
 [ext_resource path="res://fonts/Roboto-Black.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://Sprites/Design/gameplay/_0013_Vibrance-1-copy.png" type="Texture" id=16]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 8 )
@@ -54,9 +55,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Piano" parent="." instance=ExtResource( 4 )]
-
 [node name="Sheet" parent="." instance=ExtResource( 5 )]
+
+[node name="_0013_Vibrance-1-copy" type="Sprite" parent="."]
+position = Vector2( 446.451, 980.396 )
+texture = ExtResource( 16 )
+
+[node name="Piano" parent="." instance=ExtResource( 4 )]
+margin_bottom = 29.7293
 
 [node name="HUD" type="Control" parent="."]
 margin_right = 40.0
@@ -187,8 +193,8 @@ margin_right = 84.0133
 margin_bottom = 344.478
 
 [node name="Effet" type="Tween" parent="."]
-[connection signal="piano_key_pressed" from="Piano" to="Sheet" method="_on_Piano_piano_key_pressed"]
 [connection signal="after_piano_key_pressed_evaluated" from="Sheet" to="HUD" method="_on_Sheet_after_piano_key_pressed_evaluated"]
 [connection signal="note_displayed" from="Sheet" to="Piano" method="_on_Sheet_note_displayed"]
+[connection signal="piano_key_pressed" from="Piano" to="Sheet" method="_on_Piano_piano_key_pressed"]
 [connection signal="button_down" from="HUD/btnConfig" to="." method="_on_btnConfig_button_down"]
 [connection signal="pressed" from="HUD/btnConfig" to="." method="_on_btnConfig_pressed"]

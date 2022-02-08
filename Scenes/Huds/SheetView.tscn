@@ -11,7 +11,7 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -393.195, 139.196, 0, 0, 0, 0, 399.938, 68.5515 )
+"points": PoolVector2Array( 0, 0, 0, 0, -393.195, 139.196, 0, 0, 0, 0, -75.2025, 110.706, 0, 0, 0, 0, 399.938, 68.5515 )
 }
 
 [sub_resource type="Curve2D" id=2]
@@ -52,16 +52,16 @@ font_data = ExtResource( 8 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1.38664
-margin_top = -8.26185
+margin_top = -8.76887
 margin_right = 1.38666
-margin_bottom = -8.26184
+margin_bottom = -8.76892
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SheetBg" type="Sprite" parent="."]
-position = Vector2( 352.265, 444.305 )
+position = Vector2( 352.619, 444.305 )
 scale = Vector2( 0.567453, 0.567453 )
 texture = ExtResource( 1 )
 
@@ -76,12 +76,14 @@ scale = Vector2( 1.04206, 1.04206 )
 texture = ExtResource( 6 )
 
 [node name="C4" type="Path2D" parent="SheetBg/partition"]
-position = Vector2( 3.26382, 55.9355 )
+position = Vector2( 3.26382, 59.3178 )
+rotation = -0.020944
 curve = SubResource( 1 )
 script = ExtResource( 12 )
 
 [node name="D4" type="Path2D" parent="SheetBg/partition"]
-position = Vector2( -3.74973, 58.838 )
+position = Vector2( -3.74973, 62.2203 )
+rotation = -0.00872665
 curve = SubResource( 2 )
 script = ExtResource( 12 )
 
@@ -91,26 +93,26 @@ curve = SubResource( 3 )
 script = ExtResource( 12 )
 
 [node name="F4" type="Path2D" parent="SheetBg/partition"]
-position = Vector2( -2.19262, -54.7255 )
-scale = Vector2( 1, 1.491 )
+position = Vector2( -2.19262, -9.06491 )
+rotation = -0.0226893
 curve = SubResource( 4 )
 script = ExtResource( 12 )
 
 [node name="G4" type="Path2D" parent="SheetBg/partition"]
-position = Vector2( -1.40927, -15.853 )
-scale = Vector2( 0.996471, 1.04647 )
+position = Vector2( -1.40927, -12.4707 )
+rotation = -0.00349066
 curve = SubResource( 5 )
 script = ExtResource( 12 )
 
 [node name="A4" type="Path2D" parent="SheetBg/partition"]
-position = Vector2( 1.77355, -18.6029 )
-scale = Vector2( 1.00021, 1.494 )
+position = Vector2( 1.77355, -6.76495 )
+rotation = -0.0122173
 curve = SubResource( 6 )
 script = ExtResource( 12 )
 
 [node name="B4" type="Path2D" parent="SheetBg/partition"]
-position = Vector2( -2.34164, 2.13538 )
-scale = Vector2( 0.998371, 1.23024 )
+position = Vector2( -2.34164, 0.444218 )
+rotation = -0.00349066
 curve = SubResource( 7 )
 script = ExtResource( 12 )
 

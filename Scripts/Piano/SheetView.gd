@@ -103,13 +103,7 @@ func _on_Piano_piano_key_pressed(note, btn):
 	last_key_pressed = btn
 	nb_session_keypiano_pressed +=1
 	
-	print(actual_displayed_note.size())
-	print(current_note_compared)
-	print(actual_displayed_note[current_note_compared].note == note.note)
-	print(actual_displayed_note[current_note_compared].octave == note.octave)
-	print(actual_displayed_note[current_note_compared].flated == occupied_note[current_note_compared].get_node("Highlight").flated)
-	
-	if actual_displayed_note[current_note_compared].note == note.note and actual_displayed_note[current_note_compared].octave == note.octave and actual_displayed_note[current_note_compared].flated == occupied_note[current_note_compared].get_node("Highlight").flated:
+	if note.flated == actual_displayed_note[current_note_compared].flated and  actual_displayed_note[current_note_compared].note == note.note and actual_displayed_note[current_note_compared].octave == note.octave and actual_displayed_note[current_note_compared].flated == occupied_note[current_note_compared].get_node("Highlight").flated:
 		occupied_note[current_note_compared].get_node("Highlight")._changeColor(true)
 		nb_session_keypiano_pressed_corrected += 1
 	else:

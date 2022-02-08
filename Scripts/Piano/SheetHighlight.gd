@@ -28,9 +28,10 @@ func _ready():
 func _process(delta):
 	if get_parent() is PathFollow2D:
 		get_parent().offset -= speed_note*delta
+		get_parent().scale += Vector2(0.03*delta,0.03*delta)
 	
 		if get_parent().offset <= 0:
-			if index >= 0:
+			if index >= get_tree().root.get_node("./GameScene/Sheet").current_note_compared:
 				get_tree().root.get_node("./GameScene/Sheet").current_note_compared += 1
 			get_parent().queue_free()
 	
