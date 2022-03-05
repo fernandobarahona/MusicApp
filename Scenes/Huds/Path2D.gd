@@ -31,17 +31,11 @@ func _disabled_notes():
 		get_node(highlights[i]).visible = false
 
 
-func _get_free_note():
+func _get_note():
 	highlight_note = get_tree().root.get_node("./GameScene/Sheet").note_ressource.instance()
 
 	self.add_child(highlight_note)
 	highlights.append(highlight_note)
 	return highlight_note
-#	print("pass here1")
-#	for i in range(highlights.size()):
-#		print("pass here2")
-#		if get_node(highlights[i]).get_node("Highlight").free:
-#			get_node(highlights[i]).get_node("Highlight").free = false
-#			print("pass here3 "+name+""+get_node(highlights[i]).name)
-#			return get_node(highlights[i])
+
 

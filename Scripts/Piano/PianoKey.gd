@@ -24,6 +24,8 @@ func _pressed():
 
 func _button_down():
 	print("button down")
+	get_parent().get_node("Effet").interpolate_property(self, 'rect_scale', get_scale(), Vector2(1,0.98), 0.3, Tween.TRANS_QUAD, Tween.EASE_OUT)
+	get_parent().get_node("Effet").start()	
 	get_parent().emit_signal("piano_key_pressed", Note.new(key_note,get_parent().octave, flated), self)
 
 	match get_parent().octave:

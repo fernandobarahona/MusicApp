@@ -9,7 +9,6 @@
 [ext_resource path="res://fonts/Roboto-Black.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Scenes/Huds/Path2D.gd" type="Script" id=12]
 
-
 [sub_resource type="Curve2D" id=1]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -393.195, 139.196, 0, 0, 0, 0, -75.2025, 110.706, 0, 0, 0, 0, 399.938, 68.5515 )
@@ -122,55 +121,8 @@ position = Vector2( -507.092, 8.86447 )
 scale = Vector2( 1.65833, 1.65833 )
 texture = ExtResource( 7 )
 
-[node name="posA3" type="Position2D" parent="."]
-position = Vector2( 367.104, 561.931 )
-
-[node name="posB3" type="Position2D" parent="."]
-position = Vector2( 367.05, 549.985 )
-
-[node name="posC4" type="Position2D" parent="."]
-position = Vector2( 670.786, 500.859 )
-
-[node name="posD4" type="Position2D" parent="."]
-position = Vector2( 668.766, 486.553 )
-
-[node name="posE4" type="Position2D" parent="."]
-position = Vector2( 658.979, 471.695 )
-
-[node name="posF4" type="Position2D" parent="."]
-position = Vector2( 665.693, 457.081 )
-
-[node name="posG4" type="Position2D" parent="."]
-position = Vector2( 666.693, 445.351 )
-
-[node name="posA4" type="Position2D" parent="."]
-position = Vector2( 666.577, 433.292 )
-
-[node name="posB4" type="Position2D" parent="."]
-position = Vector2( 665.952, 421.313 )
-
-[node name="posC5" type="Position2D" parent="."]
-position = Vector2( 366.952, 413.209 )
-
-[node name="posD5" type="Position2D" parent="."]
-position = Vector2( 366.952, 399.353 )
-
-[node name="posE5" type="Position2D" parent="."]
-position = Vector2( 366.952, 388.999 )
-
-[node name="posF5" type="Position2D" parent="."]
-position = Vector2( 367.313, 377.77 )
-
-[node name="posG5" type="Position2D" parent="."]
-position = Vector2( 367.635, 370.876 )
-
-[node name="posA5" type="Position2D" parent="."]
-position = Vector2( 367.514, 358.427 )
-
-[node name="posB5" type="Position2D" parent="."]
-position = Vector2( 367.514, 344.269 )
-
 [node name="gameplay" type="Sprite" parent="."]
+visible = false
 position = Vector2( 1111.33, 637.223 )
 scale = Vector2( 0.580283, 0.580283 )
 texture = ExtResource( 4 )
