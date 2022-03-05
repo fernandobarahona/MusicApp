@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/G6.wav-67121e945eccd71185ac3764e03f1528.sample"
+
+[deps]
+
+source_file="res://Audios/Sfx/G6.wav"
+dest_files=[ "res://.import/G6.wav-67121e945eccd71185ac3764e03f1528.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

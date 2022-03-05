@@ -45,14 +45,11 @@ func _ready():
 	current_note_compared = 0
 	nb_session_keypiano_pressed = 0
 	nb_session_keypiano_pressed_corrected = 0
-#	var p = Note.new(GameManager.Notes.E, GameManager.Octave.oct_5)
-#	_display_note(p)
+
 	timer_spawn_delay = spawn_delay
 	var ng = NotesGenerator.new()
 	generated_notes = ng._generetate_notes(nb_notes_togenerated)
-#	for i in range(4):
-#		_display_note(generated_notes[last_displayed_index])
-		#note_offset += 150
+
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -62,15 +59,6 @@ func _process(delta):
 		_display_note(generated_notes[last_displayed_index])
 		timer_spawn_delay = spawn_delay
 		
-#	if generated_notes.size() > current_displayed_index:
-#
-#		counter -= delta
-#
-#		if counter <= 0:
-#			current_displayed_index+=1
-#			counter = 2
-#			if generated_notes.size() > current_displayed_index:
-#				_display_note(generated_notes[current_displayed_index])
 	
 
 #this function display visually on the sheet a note
@@ -84,7 +72,7 @@ func _display_note(note: Note):
 	highlight.get_node("Highlight").index = total_note_generated
 	total_note_generated += 1
 	last_displayed_index += 1
-	#highlight._resetColor()
+
 	
 	if last_displayed_index >= generated_notes.size():
 		last_displayed_index = 0
@@ -93,10 +81,7 @@ func _display_note(note: Note):
 func _on_Piano_piano_key_pressed(note, btn):
 	$Effet.interpolate_property(btn, 'rect_scale', btn.get_scale(), Vector2(1,0.98), 0.3, Tween.TRANS_QUAD, Tween.EASE_OUT)
 	$Effet.start()	
-#	if last_key_pressed:
-#		last_key_pressed.get_stylebox("normal").bg_color = last_key_pressed.btn_color
-#		last_key_pressed.get_stylebox("focus").bg_color = last_key_pressed.btn_color
-	
+
 	if current_note_compared >= actual_displayed_note.size():
 		return
 	
@@ -110,12 +95,6 @@ func _on_Piano_piano_key_pressed(note, btn):
 		occupied_note[current_note_compared].get_node("Highlight")._changeColor(false)
 	
 	emit_signal("after_piano_key_pressed_evaluated", nb_session_keypiano_pressed, nb_session_keypiano_pressed_corrected, actual_displayed_note[current_note_compared].note == note.note and actual_displayed_note[current_note_compared].octave == note.octave)
-#	if generated_notes[current_displayed_index].note == note.note and generated_notes[current_displayed_index].octave == note.octave:
-#		btn.get_stylebox("normal").bg_color = Color.green
-#		btn.get_stylebox("focus").bg_color = Color.green
-#	else:
-#		btn.get_stylebox("normal").bg_color = Color.red
-#		btn.get_stylebox("focus").bg_color = Color.red
 	
 	print("Press note "+str(note.note))
 	print("Press note octave "+str(note.octave))	

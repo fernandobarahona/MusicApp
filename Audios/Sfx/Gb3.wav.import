@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Gb3.wav-e448e9e59dc98053e97832d4a46ba18f.sample"
+
+[deps]
+
+source_file="res://Audios/Sfx/Gb3.wav"
+dest_files=[ "res://.import/Gb3.wav-e448e9e59dc98053e97832d4a46ba18f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

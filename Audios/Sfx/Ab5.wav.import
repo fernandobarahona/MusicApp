@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ab5.wav-2da835bfce0c86c028adcc928db340b5.sample"
+
+[deps]
+
+source_file="res://Audios/Sfx/Ab5.wav"
+dest_files=[ "res://.import/Ab5.wav-2da835bfce0c86c028adcc928db340b5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

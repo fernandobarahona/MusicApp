@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Db4.wav-0957a7d6f858faac5667f3ff4c06a437.sample"
+
+[deps]
+
+source_file="res://Audios/Sfx/Db4.wav"
+dest_files=[ "res://.import/Db4.wav-0957a7d6f858faac5667f3ff4c06a437.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

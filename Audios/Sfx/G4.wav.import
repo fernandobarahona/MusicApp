@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/G4.wav-25da6a09c599253a5335fe1f78f3368d.sample"
+
+[deps]
+
+source_file="res://Audios/Sfx/G4.wav"
+dest_files=[ "res://.import/G4.wav-25da6a09c599253a5335fe1f78f3368d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

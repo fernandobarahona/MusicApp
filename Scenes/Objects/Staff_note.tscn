@@ -1,12 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Piano/SheetHighlight.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Design/gameplay/_0015_Vector-Smart-Object-copy-2.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Design/gameplay/flat_green.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Design/gameplay/_0015_Vector-Smart-Object-copy-2_red.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Design/gameplay/_0015_Vector-Smart-Object-copy-2_green.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Design/gameplay/flat.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Design/gameplay/flat_red.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/gameplay/_0015_Vector-Smart-Object-copy-2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/gameplay/flat_green.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/gameplay/_0015_Vector-Smart-Object-copy-2_red.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/gameplay/_0015_Vector-Smart-Object-copy-2_green.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/gameplay/flat.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/gameplay/flat_red.png" type="Texture" id=7]
+
 
 [node name="Staff_note" type="PathFollow2D"]
 position = Vector2( -393.195, 139.196 )

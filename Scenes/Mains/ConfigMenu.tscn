@@ -3,20 +3,20 @@
 [ext_resource path="res://fonts/Bubblegum.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/SceneManager/ConfigMenu.gd" type="Script" id=2]
 [ext_resource path="res://fonts/Roboto-Black.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Sprites/Design/config/_0014_bg.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Design/config/_0013_Rectangle-1-copy-3.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Design/config/_0010_BACK.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Design/config/_0011_Layer-82.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Design/config/_0012_CONFIGURATION.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Design/config/_0006_SPEED.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Design/config/_0003_AUTO-SLOW.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Design/config/_0000_BACKGROUND.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Design/config/_0001_Polygon-1.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Design/config/_0002_Rectangle-1-copy-7.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Design/config/_0008_+.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Design/config/_0007_-.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Design/config/_0005_Rectangle-1-check.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Design/config/_0005_Rectangle-1-copy-4.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/config/_0014_bg.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/config/_0013_Rectangle-1-copy-3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/config/_0010_BACK.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/config/_0011_Layer-82.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/config/_0012_CONFIGURATION.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/config/_0006_SPEED.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/config/_0003_AUTO-SLOW.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/config/_0000_BACKGROUND.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/config/_0001_Polygon-1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/config/_0002_Rectangle-1-copy-7.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/config/_0008_+.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/config/_0007_-.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/config/_0005_Rectangle-1-check.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/config/_0005_Rectangle-1-copy-4.png" type="Texture" id=17]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -326,6 +326,9 @@ margin_left = -166.0
 margin_top = -30.0
 margin_right = 267.0
 margin_bottom = 63.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="pnaleSpeed" type="TextureRect" parent="HUD/bg"]
 margin_left = 369.0
@@ -406,7 +409,6 @@ __meta__ = {
 }
 
 [node name="Effet" type="Tween" parent="."]
-
 [connection signal="button_down" from="HUD/bg/btnBack/btnBack" to="." method="_on_btnBack_button_down"]
 [connection signal="pressed" from="HUD/bg/btnBack/btnBack" to="." method="_on_btn_pressed"]
 [connection signal="button_down" from="HUD/bg/pnaleSpeed/btnAdd/texture/btnAdd" to="." method="_on_btnAdd_button_down"]

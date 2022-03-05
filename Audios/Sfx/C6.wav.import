@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/C6.wav-64a55bd08d24a5bc08f35b8067219967.sample"
+
+[deps]
+
+source_file="res://Audios/Sfx/C6.wav"
+dest_files=[ "res://.import/C6.wav-64a55bd08d24a5bc08f35b8067219967.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

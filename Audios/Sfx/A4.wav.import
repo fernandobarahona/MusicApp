@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/A4.wav-3e4da6041d2166b732e111fae57c14be.sample"
+
+[deps]
+
+source_file="res://Audios/Sfx/A4.wav"
+dest_files=[ "res://.import/A4.wav-3e4da6041d2166b732e111fae57c14be.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

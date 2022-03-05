@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Bb3.wav-b981c413f2e7a3db96ae4f2c2754a52e.sample"
+
+[deps]
+
+source_file="res://Audios/Sfx/Bb3.wav"
+dest_files=[ "res://.import/Bb3.wav-b981c413f2e7a3db96ae4f2c2754a52e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
