@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>SheetHighlight.gd</title> 
+        <link rel="stylesheet" href="assets/style.css">
+    </head> 
+    <body> 
+        <p style="font-size: 50px;"><b>SheetHighlight</b>:<strong>Sprite</strong></p>
+        <p>this class manages the highlights of a note on the staff/p>
+        <p></p>
+        <p></p>
+        <p style="font-size: 20px;"><strong>-------------------VARIABLES--------------------------------------------------------------------------------------------------</strong></p>
+        
+        <p><b style="font-size: 15px;">->redTexture:</b> <strong>Texture</strong><br> note texture when user presse wrong piano key</p>
+        <p><b style="font-size: 15px;">->greenTexture:</b> <strong>Texture</strong><br> note texture when user presse right piano key</p>
+        <p><b style="font-size: 15px;">->normalTexture:</b> <strong>Texture</strong><br> the normal texture of a note</p>
+        <p><b style="font-size: 15px;">->flatRedTexture:</b> <strong>Texture</strong><br>flat note texture when user presse wrong piano key </p>
+        <p><b style="font-size: 15px;">->flatGreenTexture:</b> <strong>Texture</strong><br> flat note texture when user presse right piano key</p>
+        <p><b style="font-size: 15px;">->flatNormalTexture:</b> <strong>Texture</strong><br> flat note normal texture</p>
+        <p><b style="font-size: 15px;">->speed_note:</b> <strong>float</strong><br> The speed of the note when moving</p>
+        <p><b style="font-size: 15px;">->flated:</b> <strong>bool</strong><br> Boolean that indicates whether this note is flat or not</p>
+        <p><b style="font-size: 15px;">->index:</b> <strong>int</strong><br> The index of this note on the staff line</p>
+
+        
+        <p></p>
+        <p></p>
+        <p style="font-size: 20px;"><strong>-------------------FUNCTIONS--------------------------------------------------------------------------------------------------</strong></p>
+
+        <p><b style="font-size: 15px;">_display(<strong>flated_note:bool</strong>):</b><br>funtion is called to display a note on the staff. <strong>flated_note</strong> indicate whether to display flat texture or not</p>
+        <p><b style="font-size: 15px;">_changeColor(<strong>right:bool</strong>):</b><br>this function is called to change the color of texture according of the <strong>right</strong> value. <strong>right true</strong> mean user pressed the right piano key and <strong>right false</strong> mean user pressed the wrong piano key</p>
+        <p><b style="font-size: 15px;">_resetColor():</b><br>This function is called to reset texture of a note to normal</p>
+    </body> 
+</html>

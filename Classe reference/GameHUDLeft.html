@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>GameHUDLeft.gd</title> 
+        <link rel="stylesheet" href="assets/style.css">
+    </head> 
+    <body> 
+        <p style="font-size: 50px;"><b>GameHUDLeft</b>:<strong>Control</strong></p>
+        <p>this class manages the percentage bar on game scene(top left corner)</p>
+        <p></p>
+        <p></p>
+        <p style="font-size: 20px;"><strong>-------------------VARIABLES--------------------------------------------------------------------------------------------------</strong></p>
+        
+        <p><b style="font-size: 15px;">->last_20_try:</b> <strong>[]</strong><br> this list keeps the result(good and bad) of the user's evaluation after pressing the piano keys</p>
+        <p><b style="font-size: 15px;">->last_20_try_index:</b> <strong>float</strong><br>the current index out of 20 to evaluate the last 20 attempts of the user</p>
+        <p><b style="font-size: 15px;">->last_20_try_corrected:</b> <strong>float</strong><br>Number of good results over the user's last 20 tests</p>
+        <p><b style="font-size: 15px;">->last_20_try_size:</b> <strong>float</strong><br></p>
+        
+        <p></p>
+        <p></p>
+        <p style="font-size: 20px;"><strong>-------------------FUNCTIONS--------------------------------------------------------------------------------------------------</strong></p>
+
+        <p><b style="font-size: 15px;">_on_Sheet_after_piano_key_pressed_evaluated():</b><br>This function is called after evaluating the piano key pressed by the user accordingto the note displayed on the sheetView. It calculates the user's percentage of success over the last attemps</p>
+    </body> 
+</html>

@@ -64,7 +64,7 @@ func _process(delta):
 #this function display visually on the sheet a note
 func _display_note(note: Note):
 	emit_signal("note_displayed", note)
-	highlight = _get_note(note)
+	highlight = _instantiate_note(note)
 	actual_displayed_note.append(note)
 	occupied_note.append(highlight)
 	highlight.visible = true
@@ -99,34 +99,34 @@ func _on_Piano_piano_key_pressed(note, btn):
 	current_note_compared += 1
 
 
-func _get_note(note):
+func _instantiate_note(note):
 	
 	if note.note == GameManager.Notes.C:
 		print("free note c")
-		highlight = $SheetBg/partition/C4._get_note()
+		highlight = $SheetBg/partition/C4._instantiate_note()
 
 	if note.note == GameManager.Notes.D:
 		print("free note d")
-		highlight = $SheetBg/partition/D4._get_note()
+		highlight = $SheetBg/partition/D4._instantiate_note()
 
 	if note.note == GameManager.Notes.E:
 		print("free note e")
-		highlight = $SheetBg/partition/E4._get_note()
+		highlight = $SheetBg/partition/E4._instantiate_note()
 
 	if note.note == GameManager.Notes.F:
 		print("free note f")
-		highlight = $SheetBg/partition/F4._get_note()
+		highlight = $SheetBg/partition/F4._instantiate_note()
 			
 	if note.note == GameManager.Notes.G:
 		print("free note g")
-		highlight = $SheetBg/partition/G4._get_note()
+		highlight = $SheetBg/partition/G4._instantiate_note()
 
 	if note.note == GameManager.Notes.A:
 		print("free note a")
-		highlight = $SheetBg/partition/A4._get_note()
+		highlight = $SheetBg/partition/A4._instantiate_note()
 			
 	if note.note == GameManager.Notes.B:
 		print("free note b")
-		highlight = $SheetBg/partition/B4._get_note()
+		highlight = $SheetBg/partition/B4._instantiate_note()
 	
 	return highlight

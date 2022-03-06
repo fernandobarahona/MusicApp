@@ -1,12 +1,10 @@
 extends Path2D
 
 export(Array, NodePath) var highlights
-var free:bool = true
 var highlight_note
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#$PathFollow2D.offset = 50
 	_disabled_notes()
 	#pass # Replace with function body.
 
@@ -14,24 +12,13 @@ func _ready():
 func _process(delta):
 	pass
 
-func _display(offset:float):
-	$PathFollow2D.offset += offset
-
-func _changeColor(rigth:bool):
-	highlights._changeColor(rigth)
-
-func _resetColor():
-	$PathFollow2D.offset = 800
-	highlights._resetColor()
-
-
 func _disabled_notes():
 	for i in range(highlights.size()):
 		get_node(highlights[i]).offset = 800
 		get_node(highlights[i]).visible = false
 
 
-func _get_note():
+func _instantiate_note():
 	highlight_note = get_tree().root.get_node("./GameScene/Sheet").note_ressource.instance()
 
 	self.add_child(highlight_note)

@@ -8,7 +8,6 @@
 [ext_resource path="res://Sprites/gameplay/flat.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/gameplay/flat_red.png" type="Texture" id=7]
 
-
 [node name="Staff_note" type="PathFollow2D"]
 position = Vector2( -393.195, 139.196 )
 rotation = -0.0757008

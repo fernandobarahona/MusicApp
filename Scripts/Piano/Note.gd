@@ -21,3 +21,4 @@ func _init(note, octave, is_flated = false):
 	self.note = note
 	self.octave = octave
 	self.flated = is_flated
+	

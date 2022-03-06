@@ -37,7 +37,6 @@ func _on_Sheet_after_piano_key_pressed_evaluated(nb_try, nb_try_correct, correct
 			last_20_try[last_20_try_index] = false
 		
 		
-		
 		last_20_try_corrected = 0
 		
 		for i in range(last_20_try_size):
