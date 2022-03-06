@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>SheetView.gd</title> 
+        <link rel="stylesheet" href="assets/style.css">
+    </head> 
+    <body> 
+        <p style="font-size: 50px;"><b>SheetView</b>:<strong>Control</strong></p>
+        <p>this class manages all SheetView behaviours</p>
+        <p></p>
+        <p></p>
+        <p style="font-size: 20px;"><strong>-------------------VARIABLES--------------------------------------------------------------------------------------------------</strong></p>
+        
+        <p><b style="font-size: 15px;">->generated_notes:</b> <strong>[Note]</strong><br> list all notes generated to create a musical sheet</p>
+        <p><b style="font-size: 15px;">->nb_notes_togenerated:</b> <strong>int</strong><br> number of notes to generate to create a musical sheet</p>
+        <p><b style="font-size: 15px;">->last_displayed_index:</b> <strong>int</strong><br>index of last note displayed from the <strong>generated_notes</strong> </p>
+        <p><b style="font-size: 15px;">->last_key_pressed:</b> <strong>Button</strong><br> last button pressed on the piano</p>
+        <p><b style="font-size: 15px;">->highlight:</b> <strong>SheetHighlight</strong><br> temp variable to stock the latest instantiate highlight note</p>
+        <p><b style="font-size: 15px;">->actual_displayed_note:</b> <strong>[]</strong><br>List of notes already displayed on the sheet.</p>
+        <p><b style="font-size: 15px;">->actual_displayed_highlight:</b> <strong>[]</strong><br> List of notes highlight already displayed on the sheet.</p>
+        <p><b style="font-size: 15px;">->nb_session_keypiano_pressed:</b> <strong>int</strong><br> Number of piano key pressed since the session started</p>
+        <p><b style="font-size: 15px;">->nb_session_keypiano_pressed_corrected:</b> <strong>int</strong><br> Number of correct piano key pressed since the session started</p>
+        <p><b style="font-size: 15px;">->spawn_delay:</b> <strong>float</strong><br> time waiting time to create the next note on the SheetView</p>
+        <p><b style="font-size: 15px;">->timer_spawn_delay:</b> <strong>float</strong><br> a temp variable to count the waiting time before creating next note on the sheetView. next note is created when his value reach 0</p>
+        <p><b style="font-size: 15px;">->total_note_generated:</b> <strong>int</strong><br> Total note instantiated on the sheet since the music started</p>
+        <p><b style="font-size: 15px;">->current_note_compared:</b> <strong>int</strong><br> index of current sheet note to compare depending on what piano key the user pressed</p>
+
+        
+        <p></p>
+        <p></p>
+        <p style="font-size: 20px;"><strong>-------------------FUNCTIONS--------------------------------------------------------------------------------------------------</strong></p>
+
+        <p><b style="font-size: 15px;">_display_note(<strong>note:Note</strong>):</b><br>This function is called to displaye visually a note on the sheetView. these note come from the <strong>generated_notes</strong> list</p>
+        <p><b style="font-size: 15px;">_on_Piano_piano_key_pressed(<strong>note:Note</strong>, <strong>btn:Button</strong>):</b><br>This function responds to the <strong>piano_key_pressed</strong> event emitted when the user presses a piano key. it evaluate the key pressed according to the note displayed</p>
+        <p><b style="font-size: 15px;">_instantiate_note(<strong>note:Note</strong>):</b><br>This function is called to instantiate a highlight note on the staff depending on the <strong>note value(CDEFGAB...)</strong> </p>
+    </body> 
+</html>

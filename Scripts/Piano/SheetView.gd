@@ -11,21 +11,16 @@ var generated_notes = []
 # number of notes to generate
 var nb_notes_togenerated = 20
 
-var counter = 2
 
 var last_displayed_index = 0
 
 var last_key_pressed
 
-var free_note
-
 var highlight
-
-#var note_offset = 50
 
 var actual_displayed_note:Array
 
-var occupied_note:Array
+var actual_displayed_highlight:Array
 
 #since his start to play this session
 var nb_session_keypiano_pressed
@@ -66,7 +61,7 @@ func _display_note(note: Note):
 	emit_signal("note_displayed", note)
 	highlight = _instantiate_note(note)
 	actual_displayed_note.append(note)
-	occupied_note.append(highlight)
+	actual_displayed_highlight.append(highlight)
 	highlight.visible = true
 	highlight.get_node("Highlight")._display(note.flated)
 	highlight.get_node("Highlight").index = total_note_generated
@@ -85,11 +80,11 @@ func _on_Piano_piano_key_pressed(note, btn):
 	last_key_pressed = btn
 	nb_session_keypiano_pressed +=1
 	
-	if note.flated == actual_displayed_note[current_note_compared].flated and  actual_displayed_note[current_note_compared].note == note.note and actual_displayed_note[current_note_compared].octave == note.octave and actual_displayed_note[current_note_compared].flated == occupied_note[current_note_compared].get_node("Highlight").flated:
-		occupied_note[current_note_compared].get_node("Highlight")._changeColor(true)
+	if note.flated == actual_displayed_note[current_note_compared].flated and  actual_displayed_note[current_note_compared].note == note.note and actual_displayed_note[current_note_compared].octave == note.octave and actual_displayed_note[current_note_compared].flated == actual_displayed_highlight[current_note_compared].get_node("Highlight").flated:
+		actual_displayed_highlight[current_note_compared].get_node("Highlight")._changeColor(true)
 		nb_session_keypiano_pressed_corrected += 1
 	else:
-		occupied_note[current_note_compared].get_node("Highlight")._changeColor(false)
+		actual_displayed_highlight[current_note_compared].get_node("Highlight")._changeColor(false)
 	
 	emit_signal("after_piano_key_pressed_evaluated", nb_session_keypiano_pressed, nb_session_keypiano_pressed_corrected, actual_displayed_note[current_note_compared].note == note.note and actual_displayed_note[current_note_compared].octave == note.octave)
 	
